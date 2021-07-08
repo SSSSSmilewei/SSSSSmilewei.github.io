@@ -21,13 +21,13 @@
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  src: url("STHeiti-UltraLight-2.ttc");
   font-weight: 'normal';
   font-style: 'normal';
 }
 @font-face {
   font-family: 'Varela Round';
-  src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf");
+  src: url("/frons/STHeiti-Medium-4.ttc");
   font-weight: 'normal';
   font-style: 'normal';
 }

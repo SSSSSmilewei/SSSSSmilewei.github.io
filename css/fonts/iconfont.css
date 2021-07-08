@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2652450 */
+  src: url('iconfont.woff2?t=1625476382753') format('woff2'),
+       url('iconfont.woff?t=1625476382753') format('woff'),
+       url('iconfont.ttf?t=1625476382753') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pixiv:before {
+  content: "\e60e";
+}
+
+.icon-Wiki:before {
+  content: "\e655";
+}
+
+.icon-youtube:before {
+  content: "\e7ad";
+}
+
+.icon-twitter:before {
+  content: "\e7af";
+}
+
+.icon-wangyiyunyinle:before {
+  content: "\e611";
+}
+
+.icon-bilibili-line:before {
+  content: "\e69e";
+}
+
+.icon-zhihu:before {
+  content: "\e623";
+}
+
+.icon-osu-logo-white:before {
+  content: "\e601";
+}
+
