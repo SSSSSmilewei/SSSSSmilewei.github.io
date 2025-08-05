@@ -2,91 +2,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://neopost.neocities.org/jp/</loc>
+    <loc>https://Smilewei.github.io/jp/posts/</loc>
     <lastmod>2025-02-01T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/"
+                href="https://Smilewei.github.io/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/"
+                href="https://Smilewei.github.io/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/"
+                href="https://Smilewei.github.io/jp/posts/"
                 />
   </url><url>
-    <loc>https://neopost.neocities.org/jp/posts/</loc>
+    <loc>https://Smilewei.github.io/jp/</loc>
     <lastmod>2025-02-01T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/posts/"
+                href="https://Smilewei.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/posts/"
+                href="https://Smilewei.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/posts/"
+                href="https://Smilewei.github.io/jp/"
                 />
   </url><url>
-    <loc>https://neopost.neocities.org/jp/tags/</loc>
+    <loc>https://Smilewei.github.io/jp/tags/</loc>
     <lastmod>2025-02-01T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/tags/"
+                href="https://Smilewei.github.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/tags/"
+                href="https://Smilewei.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/tags/"
+                href="https://Smilewei.github.io/jp/tags/"
                 />
   </url><url>
-    <loc>https://neopost.neocities.org/jp/tags/%E3%81%AB%E3%82%83%E3%83%BC/</loc>
+    <loc>https://Smilewei.github.io/jp/tags/%E3%81%AB%E3%82%83%E3%83%BC/</loc>
     <lastmod>2025-02-01T10:00:00-03:00</lastmod>
   </url><url>
-    <loc>https://neopost.neocities.org/jp/posts/mysterious-meow/</loc>
+    <loc>https://Smilewei.github.io/jp/posts/mysterious-meow/</loc>
     <lastmod>2025-02-01T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/posts/mysterious-meow/"
+                href="https://Smilewei.github.io/en/posts/mysterious-meow/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/posts/mysterious-meow/"
+                href="https://Smilewei.github.io/jp/posts/mysterious-meow/"
                 />
   </url><url>
-    <loc>https://neopost.neocities.org/jp/categories/</loc>
+    <loc>https://Smilewei.github.io/jp/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/categories/"
+                href="https://Smilewei.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/categories/"
+                href="https://Smilewei.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/categories/"
+                href="https://Smilewei.github.io/jp/categories/"
                 />
   </url>
 </urlset>

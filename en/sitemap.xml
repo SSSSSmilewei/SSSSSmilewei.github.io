@@ -2,107 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://neopost.neocities.org/en/</loc>
+    <loc>https://Smilewei.github.io/en/tags/meow/</loc>
+    <lastmod>2025-02-01T10:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://Smilewei.github.io/en/posts/mysterious-meow/</loc>
     <lastmod>2025-02-01T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/"
+                href="https://Smilewei.github.io/jp/posts/mysterious-meow/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://Smilewei.github.io/en/posts/mysterious-meow/"
+                />
+  </url><url>
+    <loc>https://Smilewei.github.io/en/posts/</loc>
+    <lastmod>2025-02-01T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja-jp"
+                href="https://Smilewei.github.io/jp/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/"
+                href="https://Smilewei.github.io/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/"
+                href="https://Smilewei.github.io/en/posts/"
                 />
   </url><url>
-    <loc>https://neopost.neocities.org/en/tags/meow/</loc>
-    <lastmod>2025-02-01T10:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://neopost.neocities.org/en/posts/mysterious-meow/</loc>
+    <loc>https://Smilewei.github.io/en/</loc>
     <lastmod>2025-02-01T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/posts/mysterious-meow/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://neopost.neocities.org/en/posts/mysterious-meow/"
-                />
-  </url><url>
-    <loc>https://neopost.neocities.org/en/posts/</loc>
-    <lastmod>2025-02-01T10:00:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/posts/"
+                href="https://Smilewei.github.io/jp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/posts/"
+                href="https://Smilewei.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/posts/"
+                href="https://Smilewei.github.io/en/"
                 />
   </url><url>
-    <loc>https://neopost.neocities.org/en/tags/</loc>
+    <loc>https://Smilewei.github.io/en/tags/</loc>
     <lastmod>2025-02-01T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/tags/"
+                href="https://Smilewei.github.io/jp/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/tags/"
+                href="https://Smilewei.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/tags/"
+                href="https://Smilewei.github.io/en/tags/"
                 />
   </url><url>
-    <loc>https://neopost.neocities.org/en/posts/friends/</loc>
+    <loc>https://Smilewei.github.io/en/posts/friends/</loc>
     <lastmod>2025-01-29T21:05:11-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/posts/friends/"
+                href="https://Smilewei.github.io/posts/friends/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/posts/friends/"
+                href="https://Smilewei.github.io/en/posts/friends/"
                 />
   </url><url>
-    <loc>https://neopost.neocities.org/en/tags/rawr/</loc>
+    <loc>https://Smilewei.github.io/en/tags/rawr/</loc>
     <lastmod>2025-01-29T21:05:11-03:00</lastmod>
   </url><url>
-    <loc>https://neopost.neocities.org/en/categories/</loc>
+    <loc>https://Smilewei.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-jp"
-                href="https://neopost.neocities.org/jp/categories/"
+                href="https://Smilewei.github.io/jp/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://neopost.neocities.org/categories/"
+                href="https://Smilewei.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://neopost.neocities.org/en/categories/"
+                href="https://Smilewei.github.io/en/categories/"
                 />
   </url>
 </urlset>
