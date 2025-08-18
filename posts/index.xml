@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>posts on Smilewei is bobNeko</title>
+    <title>posts on Smilewei&#39;s Blog</title>
     <link>https://SSSSSmilewei.github.io/posts/</link>
-    <description>Recent content in posts on Smilewei is bobNeko</description>
+    <description>Recent content in posts on Smilewei&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Jan 2025 21:05:11 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://SSSSSmilewei.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>friends!!</title>
+      <title>关于我的一切（大概）</title>
+      <link>https://SSSSSmilewei.github.io/posts/introduction/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://SSSSSmilewei.github.io/posts/introduction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>友链列表</title>
       <link>https://SSSSSmilewei.github.io/posts/friends/</link>
-      <pubDate>Wed, 29 Jan 2025 21:05:11 -0300</pubDate>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://SSSSSmilewei.github.io/posts/friends/</guid>
       <description>&lt;p&gt;喵喵喵喵喵喵喵喵喵&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>与我联系</title>
+      <link>https://SSSSSmilewei.github.io/posts/contact/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://SSSSSmilewei.github.io/posts/contact/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

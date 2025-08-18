@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>猫猫 | Smilewei is bobNeko</title>
-    <link rel="canonical" href="http://localhost:1313/">
+<head>
+    <title>与我联系 | Smilewei&#39;s Blog</title>
+    <link rel="canonical" href="https://SSSSSmilewei.github.io/">
     
     
     <link rel="icon" href="/favicon.ico">
@@ -561,23 +561,45 @@ pre {
     <meta charset="utf-8">
 </head>
 <body>
-        <header><h1 id="Smilewei is bobNeko"><a href="http://localhost:1313/">Smilewei is bobNeko</a></h1></header>
+        <header><h1 id="Smilewei&#39;s Blog"><a href="https://SSSSSmilewei.github.io/">Smilewei&#39;s Blog</a></h1></header>
 <main>
     
-<article style="padding-left: 2rem;">
-    <h2>猫猫</h2>
-    <ul>
+<div id="single-post">
+
+    <article>
+        <h2>与我联系</h2>
         
-        <li class="tag-item">
-            <a href="/posts/friends/">friends!!</a>
-            <p> > 喵喵喵喵喵喵喵喵喵
-喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜
-</p>
-        </li>
+        tags:
         
-    </ul>
-    <p style="margin-top: 2.5rem;"><a href="/tags">all tags</a></p>
-</article>
+        <div class="post-header">
+        @Smilewei <span class="timestamp">18/08/2025</span>
+        </div>
+        <p></p>
+        
+        <div class="auto-numbering" id="full-content"></div>
+        
+    </article>
+    <script>
+    window.addEventListener('click', e => {
+        let dropboxs = document.getElementsByClassName("dropbox-content");
+        let dropbox_btns = document.getElementsByClassName("dropbox-btn");
+
+        if (dropbox_btns.namedItem(e.target.id) != null) return;
+
+        if(dropboxs.namedItem(e.target.id) == null) {
+            for (let i = 0; i < dropboxs.length; i++) {
+                dropboxs[i].removeAttribute("visible");
+            }
+        }
+    }, true)
+
+    function toggleDropbox(id) {
+        let dropbox = document.getElementById(id);
+
+        dropbox.toggleAttribute("visible");
+    }
+    </script>
+</div>
 
     
 </main>

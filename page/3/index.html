@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>猫猫 | Smilewei is bobNeko</title>
-    <link rel="canonical" href="http://localhost:1313/">
+<head>
+	<meta name="generator" content="Hugo 0.148.2">
+    <title>Smilewei&#39;s Blog</title>
+    <link rel="canonical" href="https://SSSSSmilewei.github.io/">
     
     
     <link rel="icon" href="/favicon.ico">
@@ -561,23 +562,166 @@ pre {
     <meta charset="utf-8">
 </head>
 <body>
-        <header><h1 id="Smilewei is bobNeko"><a href="http://localhost:1313/">Smilewei is bobNeko</a></h1></header>
+        <header><h1 id="Smilewei&#39;s Blog"><a href="https://SSSSSmilewei.github.io/">Smilewei&#39;s Blog</a></h1></header>
 <main>
     
-<article style="padding-left: 2rem;">
-    <h2>猫猫</h2>
-    <ul>
+    
+    <nav class="languages links">
+        <ul>
         
-        <li class="tag-item">
-            <a href="/posts/friends/">friends!!</a>
-            <p> > 喵喵喵喵喵喵喵喵喵
-喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜喵喵咕噜咕噜
-</p>
+        <li>
+            <a href="/en/">english</a>
         </li>
         
+        <li>
+            <a href="/jp/">日本語</a>
+        </li>
+        
+        </ul>
+    </nav>
+    
+    <div id="content">
+    <aside id="sidebar">
+        <div id="avatar">
+            
+            <img class="flower" src="/smilewei.jpg">
+            
+        </div>
+        
+        <div id="bio">
+        
+            <p><strong>你好呀~</strong></p>
+<p>叫我<strong>围笑</strong>或者<strong>山猫猫</strong>就好</p>
+<p>这里是我的博客，是我记录与分享的地方。</p>
+<p>喜欢您来，感谢你来到这里！</p>
+<p>祝您度过安定幸福的一天哦~</p>
+<p>永持希望，保持围笑。</p>
+
+        
+        </div>
+        
+        <div class="small-box">
+            
+            </ul>
+        </div>
+
+        
+        <div>
+            <div class="tags">
+                <p class="tags">Tags</p>
+            </div>
+
+            <ul class="tags">
+            
+            
+            
+            
+            </ul>
+            
+        
+        
+        <nav class="links">
+            <ul>
+            
+            
+                <li><a href="https://sssssmilewei.github.io/posts/contact/">Contact me</a></li>
+            
+                <li><a href="https://sssssmilewei.github.io/posts/friends/">Friends!!</a></li>
+            
+                <li><a href="https://sssssmilewei.github.io/posts/introduction/">About me</a></li>
+            
+            
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <article id="top" class="clearfix">
+            
+        </article>
+    
+    
+    
+        <article id="post-0">
+            <h2><a href="/posts/contact/">与我联系</a></h2>
+            
+            tags:
+            
+            <div class="post-header">
+                @Smilewei <span class="timestamp">18/08/2025</span>
+            </div>
+            <p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="full-content"></div>
+                
+            </div>
+            
+        </article>
+    
+    
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
     </ul>
-    <p style="margin-top: 2.5rem;"><a href="/tags">all tags</a></p>
-</article>
+    <script>
+    window.addEventListener('click', e => {
+        let dropboxs = document.getElementsByClassName("dropbox-content");
+        let dropbox_btns = document.getElementsByClassName("dropbox-btn");
+
+        if (dropbox_btns.namedItem(e.target.id) != null) return;
+
+        if(dropboxs.namedItem(e.target.id) == null) {
+            for (let i = 0; i < dropboxs.length; i++) {
+                dropboxs[i].removeAttribute("visible");
+            }
+        }
+    }, true)
+
+    function toggleReadMore(id) {
+        var post = document.getElementById(id)
+        var fullContent = post.getElementsByClassName("full-content")[0];
+        var btnText = post.getElementsByClassName("read-more-btn")[0];
+        var textContent = post.getElementsByClassName("text-content")[0];
+
+        if (fullContent.style.display === "none") {
+            textContent.style.display = "none";
+            fullContent.style.display = "inline";
+            btnText.innerHTML = "阅读更少";
+        } else {
+            textContent.style.display = "inline";
+            fullContent.style.display = "none";
+            btnText.innerHTML = "阅读更多";
+        }
+    }
+
+    function toggleDropbox(id) {
+        let dropbox = document.getElementById(id);
+
+        dropbox.toggleAttribute("visible");
+    }
+    </script>
+    </main>
 
     
 </main>
