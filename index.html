@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-	<meta name="generator" content="Hugo 0.148.2">
+	<meta name="generator" content="Hugo 0.150.0">
     <title>Smilewei&#39;s Blog</title>
     <link rel="canonical" href="https://SSSSSmilewei.github.io/">
     
@@ -260,6 +260,59 @@ a:hover {
     margin-top: 1em;
     margin-right: 2em;
     border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+#sidebar div {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+ 
+aside div + div {
+    margin-top: 20px;
+}
+
+#sidebar div + div {
+    margin-top: 20px;
+}
+
+ 
+.aside-spacing-20px > div + div {
+    margin-top: 20px;
+}
+
+.aside-div-spacing {
+    margin-bottom: 20px;
+}
+
+.aside-div-spacing:last-child {
+    margin-bottom: 0;
+}
+
+.center-in-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .small-box {
@@ -327,6 +380,19 @@ article {
     border-radius: .3em;
     margin-bottom: 1em;
     box-shadow: var(--post-shadow-color) 5px 5px;
+    width: 575px;
+    max-width: 575px;
+    min-width: 575px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    article {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
 }
 article img {
     max-width: 100%;
@@ -410,6 +476,18 @@ header h1 a:hover {
 
 .center { text-align: center; }
 
+div {
+    text-align: center;
+}
+
+div * {
+    text-align: center;
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
 .img-right {
     max-width: 7.5em;
     max-height: 7.5em;
@@ -492,7 +570,19 @@ header h1 a:hover {
 }
 
 #single-post > article {
-    max-width: 48rem
+    width: 575px;
+    max-width: 575px;
+    min-width: 575px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    #single-post > article {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
 }
 
 #single-post > article > #post-toc-mobile {
@@ -546,6 +636,30 @@ header h1 a:hover {
     #single-post > article > #post-toc-mobile {
         display: inline;
     }
+
+     
+    main {
+        width: 100%;
+        max-width: 100%;
+        padding: 1em;
+        margin: 0 auto;
+    }
+    
+    article {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        box-sizing: border-box;
+    }
+    
+    #top {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 pre {
@@ -590,17 +704,20 @@ pre {
         
         <div id="bio">
         
-            <p><strong>你好呀~</strong></p>
-<p>叫我<strong>围笑</strong>或者<strong>山猫猫</strong>就好</p>
-<p>这里是我的博客，是我记录与分享的地方。</p>
-<p>喜欢您来，感谢你来到这里！</p>
-<p>祝您度过安定幸福的一天哦~</p>
-<p>永持希望，保持围笑。</p>
+            <p><strong>你好呀~👋</strong></p>
+<p>叫我<strong>围笑</strong>或者<strong>山猫猫</strong>就好!</p>
 
         
         </div>
         
         <div class="small-box">
+            
+                <ul>
+<li>计算机科学初心者</li>
+<li>音乐游戏</li>
+<li>哲学与精神分析</li>
+</ul>
+
             
             </ul>
         </div>
@@ -624,11 +741,11 @@ pre {
             <ul>
             
             
-                <li><a href="https://sssssmilewei.github.io/posts/contact/">Contact me</a></li>
+                <li><a href="https://github.com/SSSSSmilewei">Github</a></li>
             
-                <li><a href="https://sssssmilewei.github.io/posts/friends/">Friends!!</a></li>
+                <li><a href="https://space.bilibili.com/101670276">MikuFans</a></li>
             
-                <li><a href="https://sssssmilewei.github.io/posts/introduction/">About me</a></li>
+                <li><a href="https://t.me/smilewei114514">Telegram</a></li>
             
             
             </ul>
@@ -637,11 +754,56 @@ pre {
     <main>
         <article id="top" class="clearfix">
             
+            <section>
+            <div class="img-right">
+                <img src="">
+            </div>
+            <div>
+            <h1>Saluton👋! Mi estas Smilewei!</h1>
+            
+                <p>这里是一个已愈精神病人的乐园。</p>
+            
+                <p>喜欢您来，也感谢您来到这里。</p>
+            
+            </div>
+            </section>
+            <section>
+            <h4></h4>
+                <ul>
+                
+                    <li>永持希望，保持围笑。</li>
+                
+                    <li>Always Hopeful and keep your smilewei.</li>
+                
+                    <li>Ĉiam Esperplena kaj Konservu vian Ridetowein.</li>
+                
+                </ul>
+            </section>
+            
         </article>
     
     
     
         <article id="post-0">
+            <h2><a href="/posts/contact/">Contact me</a></h2>
+            
+            tags:
+            
+            <div class="post-header">
+                @Smilewei <span class="timestamp">18/08/2025</span>
+            </div>
+            <p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="full-content"></div>
+                
+            </div>
+            
+        </article>
+    
+        <article id="post-1">
             <h2><a href="/posts/introduction/">关于我的一切（大概）</a></h2>
             
             tags:
@@ -660,30 +822,26 @@ pre {
             
         </article>
     
+        <article id="post-2">
+            <h2><a href="/posts/friends/">友链列表</a></h2>
+            
+            tags:
+            
+            <div class="post-header">
+                @Smilewei <span class="timestamp">18/08/2025</span>
+            </div>
+            <p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="full-content"></div>
+                
+            </div>
+            
+        </article>
     
-    <ul class="pagination pagination-default">
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item">
-        <a href="/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
-        <a href="/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
+    
     <script>
     window.addEventListener('click', e => {
         let dropboxs = document.getElementsByClassName("dropbox-content");

@@ -9,7 +9,9 @@
     
     
     <meta name="description" content="にゃー
-にゃー&hellip; にゃー ゴゴ, にゃー にゃー にゃー!">
+にゃー&hellip; にゃー ゴゴ, にゃー にゃー にゃー! ゴゴ にゃー ゴゴ, ゴゴ にゃー にゃー.
+wmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeo
+wmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowm">
     
     
     <meta name="keywords" content="にゃー">
@@ -262,6 +264,59 @@ a:hover {
     margin-top: 1em;
     margin-right: 2em;
     border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+#sidebar div {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+ 
+aside div + div {
+    margin-top: 20px;
+}
+
+#sidebar div + div {
+    margin-top: 20px;
+}
+
+ 
+.aside-spacing-20px > div + div {
+    margin-top: 20px;
+}
+
+.aside-div-spacing {
+    margin-bottom: 20px;
+}
+
+.aside-div-spacing:last-child {
+    margin-bottom: 0;
+}
+
+.center-in-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .small-box {
@@ -329,6 +384,19 @@ article {
     border-radius: .3em;
     margin-bottom: 1em;
     box-shadow: var(--post-shadow-color) 5px 5px;
+    width: 575px;
+    max-width: 575px;
+    min-width: 575px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    article {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
 }
 article img {
     max-width: 100%;
@@ -412,6 +480,18 @@ header h1 a:hover {
 
 .center { text-align: center; }
 
+div {
+    text-align: center;
+}
+
+div * {
+    text-align: center;
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
 .img-right {
     max-width: 7.5em;
     max-height: 7.5em;
@@ -494,7 +574,19 @@ header h1 a:hover {
 }
 
 #single-post > article {
-    max-width: 48rem
+    width: 575px;
+    max-width: 575px;
+    min-width: 575px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    #single-post > article {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
 }
 
 #single-post > article > #post-toc-mobile {
@@ -547,6 +639,30 @@ header h1 a:hover {
 
     #single-post > article > #post-toc-mobile {
         display: inline;
+    }
+
+     
+    main {
+        width: 100%;
+        max-width: 100%;
+        padding: 1em;
+        margin: 0 auto;
+    }
+    
+    article {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        box-sizing: border-box;
+    }
+    
+    #top {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -643,7 +759,9 @@ pre {
         @mochi <span class="timestamp">01/02/2025</span>
         </div>
         <p><h2 id="にゃー">にゃー</h2>
-<p>にゃー&hellip; にゃー ゴゴ, にゃー にゃー にゃー!</p></p>
+<p>にゃー&hellip; にゃー ゴゴ, にゃー にゃー にゃー! ゴゴ にゃー ゴゴ, ゴゴ にゃー にゃー.
+wmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeo
+wmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowm</p></p>
         
         <div>
         
@@ -652,8 +770,8 @@ pre {
         </div>
         
         <div class="auto-numbering" id="full-content"><h3 id="ゴゴ">ゴゴ</h3>
-<p>ゴゴ にゃー, にゃー にゃー ゴゴ, ゴゴ にゃー にゃー. にゃー ゴゴ にゃー にゃー, ゴゴ ゴゴ ゴゴ にゃー ゴゴ, ゴゴ にゃー にゃー.
-にゃー ゴゴ, にゃー ゴゴ にゃー!</p></div>
+<p>ゴゴ にゃー, にゃー にゃー ゴゴ, ゴゴ にゃー にゃー. にゃー ゴゴ にゃー にゃー, ゴゴ ゴゴ ゴゴ にゃー ゴゴ
+にゃー ゴゴ, にゃー ゴゴ にゃー! ゴゴ にゃー ゴゴ, ゴゴ にゃー にゃー. ゴゴ にゃー ゴゴ, ゴゴ にゃー にゃー.</p></div>
         
     </article>
     <script>

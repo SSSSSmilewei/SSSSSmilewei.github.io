@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.148.2">
+	<meta name="generator" content="Hugo 0.150.0">
     <title>Smilewei&#39;s Blog</title>
     <link rel="canonical" href="https://SSSSSmilewei.github.io/">
     
@@ -260,6 +260,59 @@ a:hover {
     margin-top: 1em;
     margin-right: 2em;
     border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+#sidebar div {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+ 
+aside div + div {
+    margin-top: 20px;
+}
+
+#sidebar div + div {
+    margin-top: 20px;
+}
+
+ 
+.aside-spacing-20px > div + div {
+    margin-top: 20px;
+}
+
+.aside-div-spacing {
+    margin-bottom: 20px;
+}
+
+.aside-div-spacing:last-child {
+    margin-bottom: 0;
+}
+
+.center-in-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .small-box {
@@ -327,6 +380,19 @@ article {
     border-radius: .3em;
     margin-bottom: 1em;
     box-shadow: var(--post-shadow-color) 5px 5px;
+    width: 575px;
+    max-width: 575px;
+    min-width: 575px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    article {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
 }
 article img {
     max-width: 100%;
@@ -410,6 +476,18 @@ header h1 a:hover {
 
 .center { text-align: center; }
 
+div {
+    text-align: center;
+}
+
+div * {
+    text-align: center;
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
 .img-right {
     max-width: 7.5em;
     max-height: 7.5em;
@@ -492,7 +570,19 @@ header h1 a:hover {
 }
 
 #single-post > article {
-    max-width: 48rem
+    width: 575px;
+    max-width: 575px;
+    min-width: 575px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    #single-post > article {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
 }
 
 #single-post > article > #post-toc-mobile {
@@ -545,6 +635,30 @@ header h1 a:hover {
 
     #single-post > article > #post-toc-mobile {
         display: inline;
+    }
+
+     
+    main {
+        width: 100%;
+        max-width: 100%;
+        padding: 1em;
+        margin: 0 auto;
+    }
+    
+    article {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        box-sizing: border-box;
+    }
+    
+    #top {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -732,27 +846,49 @@ meow rawr, meow rawr meow!</p></div>
             
         </article>
     
+        <article id="post-1">
+            <h2><a href="/en/posts/friends/">friends!!</a></h2>
+            
+            tags:
+            
+            <a href="/en/tags/meow">meow</a>,
+            
+            <a href="/en/tags/rawr">rawr</a>
+            
+            <div class="post-header">
+                @mochi <span class="timestamp">29/01/2025</span>
+            </div>
+            <p><p>meow rawr meow meow, rawr!</p></p>
+            
+            <div class="photosetx2">
+                
+                <a href="/photo1.png" target="_blank"><img src="/photo1.png"></a>
+                
+                <a href="/photo2.png" target="_blank"><img src="/photo2.png"></a>
+                
+            </div>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="full-content"><p>rawr meow, meow rawr rawr meow meow, rawr meow meow rawr!
+rawr meow meow rawr, rawr meow meow meow rawr!</p></div>
+                
+            </div>
+            
+            <div class="photosetx3">
+                
+                <a href="/photo3.png" target="_blank"><img src="/photo3.png"></a>
+                
+                <a href="/photo4.png" target="_blank"><img src="/photo4.png"></a>
+                
+                <a href="/photo5.png" target="_blank"><img src="/photo5.png"></a>
+                
+            </div>
+            
+        </article>
     
-    <ul class="pagination pagination-default">
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item">
-        <a href="/en/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/en/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/en/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
+    
     <script>
     window.addEventListener('click', e => {
         let dropboxs = document.getElementsByClassName("dropbox-content");
