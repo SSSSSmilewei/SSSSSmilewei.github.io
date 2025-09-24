@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>Contact me | Smilewei&#39;s Blog</title>
+    <title>Contact me | &gt;·圍笑就是山貓貓·&lt;</title>
     <link rel="canonical" href="https://SSSSSmilewei.github.io/">
     
     
     <link rel="icon" href="/favicon.ico">
     
     
-    <meta name="description" content="">
+    <meta name="description" content="- link: &quot;https://github.com/SSSSSmilewei&quot;
+  name: &quot;Github&quot;
+
+- link: &quot;https://space.bilibili.com/101670276&quot;
+  name: &quot;MikuFans&quot;
+
+
+- link: &quot;https://t.me/smilewei114514&quot;
+  name: &quot;Telegram&quot;
+">
     
     
     
@@ -38,9 +47,23 @@
     --list-style-image: url("/flower.png");
 }
 
+@font-face {
+    font-family: 'ShiweiB2Song';
+    src: url('/Fonts/獅尾B2宋朝-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ShiweiB2Song';
+    src: url('/Fonts/獅尾B2宋朝-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'ShiweiB2Song', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @-moz-document url-prefix() {
@@ -188,6 +211,7 @@ li {
     
         list-style-image: var(--list-style-image);
     
+    margin-bottom: 5px;
 }
 
 nav {margin: 1em;}
@@ -259,59 +283,6 @@ a:hover {
     margin-top: 1em;
     margin-right: 2em;
     border-radius: .5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-}
-
-#sidebar div {
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-}
-
-aside {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-aside div {
-    margin: 0 auto;
-    text-align: center;
-}
-
- 
-aside div + div {
-    margin-top: 20px;
-}
-
-#sidebar div + div {
-    margin-top: 20px;
-}
-
- 
-.aside-spacing-20px > div + div {
-    margin-top: 20px;
-}
-
-.aside-div-spacing {
-    margin-bottom: 20px;
-}
-
-.aside-div-spacing:last-child {
-    margin-bottom: 0;
-}
-
-.center-in-aside {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
 }
 
 .small-box {
@@ -379,22 +350,6 @@ article {
     border-radius: .3em;
     margin-bottom: 1em;
     box-shadow: var(--post-shadow-color) 5px 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-    width: 575px;
-    max-width: 575px;
-    min-width: 575px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media only screen and (max-width: 800px) {
-    article {
-        width: 100%;
-        max-width: 100%;
-        min-width: auto;
-    }
 }
 article img {
     max-width: 100%;
@@ -478,18 +433,6 @@ header h1 a:hover {
 
 .center { text-align: center; }
 
-div {
-    text-align: center;
-}
-
-div * {
-    text-align: center;
-}
-
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
-
 .img-right {
     max-width: 7.5em;
     max-height: 7.5em;
@@ -572,19 +515,7 @@ div * {
 }
 
 #single-post > article {
-    width: 575px;
-    max-width: 575px;
-    min-width: 575px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media only screen and (max-width: 800px) {
-    #single-post > article {
-        width: 100%;
-        max-width: 100%;
-        min-width: auto;
-    }
+    max-width: 48rem
 }
 
 #single-post > article > #post-toc-mobile {
@@ -638,30 +569,6 @@ div * {
     #single-post > article > #post-toc-mobile {
         display: inline;
     }
-
-     
-    main {
-        width: 100%;
-        max-width: 100%;
-        padding: 1em;
-        margin: 0 auto;
-    }
-    
-    article {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        max-width: 100%;
-        min-width: auto;
-        box-sizing: border-box;
-    }
-    
-    #top {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%;
-        width: 100%;
-    }
 }
 
 pre {
@@ -672,13 +579,12 @@ pre {
     overflow-x:auto;  
 }
 </style>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
     <meta charset="utf-8">
 </head>
 <body>
-        <header><h1 id="Smilewei&#39;s Blog"><a href="https://SSSSSmilewei.github.io/">Smilewei&#39;s Blog</a></h1></header>
+        <header><h1 id="&gt;·圍笑就是山貓貓·&lt;"><a href="https://SSSSSmilewei.github.io/">&gt;·圍笑就是山貓貓·&lt;</a></h1></header>
 <main>
     
 <div id="single-post">
@@ -689,9 +595,18 @@ pre {
         tags:
         
         <div class="post-header">
-        @Smilewei <span class="timestamp">18/08/2025</span>
+        @Smilewei <span class="timestamp">2025/08/18</span>
         </div>
-        <p></p>
+        <p><pre><code>- link: &quot;https://github.com/SSSSSmilewei&quot;
+  name: &quot;Github&quot;
+
+- link: &quot;https://space.bilibili.com/101670276&quot;
+  name: &quot;MikuFans&quot;
+</code></pre>
+<hr>
+<pre><code>- link: &quot;https://t.me/smilewei114514&quot;
+  name: &quot;Telegram&quot;
+</code></pre></p>
         
         <div class="auto-numbering" id="full-content"></div>
         
