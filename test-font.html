@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体测试</title>
+    <style>
+        @font-face {
+            font-family: 'zpix';
+            src: url('/Fonts/zpix.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .test-zpix {
+            font-family: 'zpix', sans-serif;
+            font-size: 24px;
+            color: black;
+            margin: 20px;
+        }
+        
+        .test-default {
+            font-family: sans-serif;
+            font-size: 24px;
+            color: black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>字体测试页面</h1>
+    <div class="test-zpix">这是使用 zpix 字体显示的文本</div>
+    <div class="test-default">这是使用默认字体显示的文本</div>
+    <p>如果上面两行文本显示的字体不同，说明 zpix 字体加载成功。</p>
+    <p>如果字体相同，可能是字体文件路径错误或浏览器缓存问题。</p>
+</body>
+</html>
