@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.148.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>&gt;·Smilewei is Shanmeow·&lt;</title>
+    <link rel="canonical" href="http://localhost:1313/">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+    
+    <meta name="description" content="">
+    
+    
+    
+    <style>
+
+
+
+
+    
+
+
+:root {
+    --site-bg: url("/flowertile.png");
+    --accent-color: #f55cc0;
+    --select-color: #ffc1e9;
+    --link-color: #5083C1;
+    --bg-color: #CEEAFF;
+    --text-color: #191919;
+    --bg-color2: white;
+    --border-color: #215697;
+    --special-text-color: #215697;
+    --post-header-color: white;
+    --post-shadow-color: #21569760;
+    --outline-color: #6EAAD6;
+    --outline-color2: #CEEAFF;
+    --list-style-type: "";
+    --list-style-image: url("/flower.png");
+}
+
+@font-face {
+    font-family: 'zpix';
+    src: url('/Fonts/zpix.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-color) #00000000;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    -webkit-border-radius: .3rem;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+::selection {
+    background: var(--select-color);
+    color: var(--border-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: var(--site-bg);
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+p {line-height: 1.5em;}
+
+div.tags {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: .5rem 0;
+}
+
+div.tags > p.tags {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+div.tags > a {
+    margin-top: .5rem;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: var(--post-header-color);
+    filter: drop-shadow(2px 0 0 var(--outline-color)) drop-shadow(0 2px 0 var(--outline-color)) drop-shadow(-2px 0 0 var(--outline-color)) drop-shadow(0 -2px 0 var(--outline-color))drop-shadow(0 1px 1px var(--outline-color2)) drop-shadow(1px 0 1px var(--outline-color2));
+}
+
+h4,
+h5,
+h6 {color: var(--special-text-color);}
+
+header {
+    background-size: 100%;
+    background-position: center;
+    min-height: 80px;
+    margin: 0 0;
+    align-content: center;
+}
+
+header > h1 {
+    background-color: var(--bg-color2);
+    color: var(--special-text-color);
+    margin: 0 auto;
+    font-size: 2em;
+ 
+     
+    max-width: 48rem;
+    padding: 6px 12px;
+    border-radius: 1em;
+    border: 4px double var(--outline-color);
+    filter: none;
+    text-align: center;
+}
+
+ul.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+
+ul.tags {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+ul.tags li {
+    display: inline-block;
+    margin: 0 .2rem;
+}
+
+li.page-item {
+    list-style: none;
+}
+
+li.page-item a{
+    display: inline-flex;
+    font-size: 1rem;
+    margin: .2rem;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    padding: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    margin-bottom: 1em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+
+    text-decoration: none;
+    user-select: none;
+}
+
+li.page-item.active a{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+li.page-item.disabled a{
+    cursor: not-allowed;
+}
+
+li.page-item:not(.disabled):not(.active) a:hover{
+    background-color: var(--select-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+li {
+    
+        list-style-image: var(--list-style-image);
+    
+    margin-bottom: 5px;
+}
+
+nav {margin: 1em;}
+
+nav.links > ul {
+    max-width: 960px;
+    margin: auto;
+    line-height: 3rem;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: space-evenly;
+}
+
+nav.links li {
+    text-align: center;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+nav.links li > a {
+    font-weight: bold;
+    background-color: var(--bg-color);
+    border: 4px double var(--outline-color);
+    padding: .5em 3em;
+    text-decoration: none;
+}
+
+nav.links li > a:visited {color: var(--link-color);}
+nav.links li > a:hover {
+    color: var(--accent-color);
+    background-color: var(--select-color);
+}
+
+nav.languages {
+    margin: .3em;
+    text-align: center;
+}
+
+
+nav.languages ul {
+    display: inline-block;
+}
+
+nav.languages ul li {
+    display: inline-block;
+}
+
+a {
+    color: var(--link-color);
+    border-radius: .3em;
+    transition: .2s ease-out;
+}
+
+a:visited {
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: .2s ease;
+}
+
+#sidebar {
+    background-color: var(--bg-color2);
+    color: var(--special-text-color);
+    height: fit-content;
+    min-width: 320px;
+    margin-top: 1em;
+    margin-right: 2em;
+    border-radius: .5em;
+}
+
+.small-box {
+    max-width: 240px;
+    margin: auto;
+    border: 2px solid var(--bg-color);
+    font-size: 11px;
+    line-height: 1.5rem;
+}
+
+#avatar {
+    margin: .5em;
+    max-width: 320px;
+}
+
+ 
+.flower {
+    width: 300px; 
+    aspect-ratio: 1;
+    
+    
+        --g:/37.02% 37.02% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+        mask: 90.078% 79.895% var(--g),33.953% 97.355% var(--g),0.004% 49.372% var(--g),35.148% 2.257% var(--g),90.817% 21.121% var(--g),radial-gradient(100% 100%,#000 25.476%,#0000 calc(25.476% + 1px));
+    
+    
+}
+
+#bio {
+    margin: 20px;
+    padding: .2em;
+    background: var(--bg-color);
+    border: 4px double var(--bg-color2);
+    border-radius: 2em;
+    font-size: small;
+}
+
+#bio p { margin: 1em; }
+
+#content {
+    display: flex;
+    max-width: 960px;
+    margin: auto;
+}
+
+main {
+    padding: 1em;
+    padding-top: 0;
+}
+
+#top {
+    background-color: var(--bg-color);
+}
+
+#top section {
+    background-color: var(--bg-color2);
+    border-radius: .5em;
+    margin-bottom: 10px;
+    padding: .5em 1em;
+    width: 100%;
+}
+
+article {
+    background-color: var(--bg-color2);
+    padding: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    margin-bottom: 1em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+}
+article img {
+    max-width: 100%;
+}
+
+.readmore summary {
+    font-weight: bold;
+    color: var(--special-text-color);
+    list-style: none;
+    cursor: pointer;
+}
+
+header h1 a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--special-text-color);
+}
+
+header h1 a:visited {
+    color: inherit;
+}
+
+header h1 a:hover {
+    color: inherit;
+}
+
+.readmore div {
+    display: inline;
+}
+
+.readmore div p {
+    display: inline;
+}
+
+.readmore summary::-webkit-details-marker {
+  display: none;
+}
+
+.readmore[open] > summary {
+    border-bottom: 2px dashed var(--bg-color);
+    padding-bottom: .6em;
+    margin-bottom: .6em;
+}
+
+.post-header {
+    color: var(--special-text-color);
+    font-weight: bold;
+    padding: .5rem 0;
+    border-bottom: 4px double var(--outline-color);
+}
+
+.timestamp {
+    font-weight: normal;
+    font-size: smaller;
+    margin: .2em;
+    float: right;
+}
+
+.tag-item p {
+    font-size: smaller;
+}
+
+.photosetx2,
+.photosetx3 {
+    display: grid;
+    gap: 4px;
+    align-items: center;
+}
+
+.photosetx2 {grid-template-columns: 1fr 1fr;}
+.photosetx3 {grid-template-columns: 1fr 1fr 1fr;}
+
+.cropped {
+    width: 156px;
+    height: 156px;
+    overflow: hidden;
+    object-position: 25% 25%;
+}
+.photosetx2 img,
+.photosetx3 img {object-fit: cover;}
+
+.center { text-align: center; }
+
+.img-right {
+    max-width: 7.5em;
+    max-height: 7.5em;
+    float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.small-text {
+    font-size: 11px;
+    text-shadow: var(--bg-color) 1px 1px;
+}
+
+.dropbox-btn {
+    color: var(--link-color);
+    font-weight: bold;
+    background-color: var(--bg-color);
+     
+    border: 1px solid var(--outline-color);
+     
+    text-decoration: none;
+}
+
+.dropbox-content[visible] {
+    display: block;
+}
+
+.dropbox-content {
+    display: none;
+    position: absolute;
+    z-index: 1
+}
+
+.table-of-contents {
+    background-color: var(--bg-color2);
+    padding: .3em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+}
+
+.table-of-contents.sidebar {
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
+    width: 10rem;
+    flex-shrink: 0;
+    max-height: calc(100vh - 2rem);
+    overflow-x: auto;
+}
+
+.table-of-contents.float {
+    width: max-content;
+    max-width: 50vw;
+    max-height: 50%;
+    overflow: auto;
+}
+
+.table-of-contents nav {
+    margin: 0 .5em;
+}
+
+.table-of-contents nav ul {
+    margin: .5em 1em;
+    padding: 0;
+}
+
+.table-of-contents nav li {
+    margin: .3em 0;
+}
+
+#single-post {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#single-post > article {
+    max-width: 48rem
+}
+
+#single-post > article > #post-toc-mobile {
+    display: none;
+}
+
+ 
+@media only screen and (max-width: 800px) {
+    #content {
+        flex-wrap: wrap;
+    }
+    #sidebar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 0;
+        margin-right: 0;
+        margin-bottom: 1em;
+        border-radius: .3em;
+    }
+    header {min-height: 110px;}
+    header > h1 { 
+        width: fit-content;
+        padding: .3em 1em;
+    }
+    nav.links > ul {
+     
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #bio {width: 50%;}
+    
+    #sidebar ul {
+        line-height: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    #sidebar > .small-box li {
+        margin: .3em 1em;
+    }
+
+    #single-post > .table-of-contents.sidebar {
+        display: none;
+    }
+
+    #single-post > article > #post-toc-mobile {
+        display: inline;
+    }
+}
+
+pre {
+    border:1px solid var(--outline-color);
+    border-radius:6px;
+    padding:0.75rem 1rem;
+    margin:1.2rem 0;
+    overflow-x:auto;  
+}
+</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta charset="utf-8">
+</head>
+<body>
+        <header><h1 id="&gt;·Smilewei is Shanmeow·&lt;"><a href="http://localhost:1313/en/">&gt;·Smilewei is Shanmeow·&lt;</a></h1></header>
+<main>
+    
+    
+    <nav class="languages links">
+        <ul>
+        
+        <li>
+            <a href="/">简体中文</a>
+        </li>
+        
+        </ul>
+    </nav>
+    
+    <div id="content">
+    <aside id="sidebar">
+        <div id="avatar">
+            
+            <img class="flower" src="/images/smilewei.jpg">
+            
+        </div>
+        
+        <div id="bio">
+        
+            <p>永持<strong>希望</strong>，
+保持<strong>圍笑</strong>。</p>
+<p>Always <strong>Hopeful</strong> and keep your <strong>Smilewei</strong>.</p>
+<p>Ĉiam <strong>Esperplena</strong> kaj konservu vian <strong>Ridetowein</strong>.</p>
+
+        
+        </div>
+        
+        <div class="small-box">
+            
+            </ul>
+        </div>
+
+        
+        <div>
+            <div class="tags">
+                <p class="tags">Tags</p>
+            </div>
+
+            <ul class="tags">
+            
+            
+            
+            
+            </ul>
+            
+        
+        
+        <nav class="links">
+            <ul>
+            
+            
+                <li><a href="/en-us/posts/introduction/">Who am I? | Kiu mi estas</a></li>
+            
+                <li><a href="/en-us/posts/contact/">Contact me | Kontaktu min</a></li>
+            
+                <li><a href="/en-us/posts/friends/">My friends | Mia amiko</a></li>
+            
+                <li><a href="/en-us/posts/favorite/">My favorite | Favorataj </a></li>
+            
+            
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <article id="top" class="clearfix">
+            
+            <section>
+            <div class="img-right">
+                <img src="/images/bio.png">
+            </div>
+            <div>
+            <h1>Saluton👋! Mi estas Smilewei!</h1>
+            
+                <p>\ Hi, you can called me Smilewei or Shanmeow!</p>
+            
+                <p>\ Saluton, mi estas Smilewei!</p>
+            
+                <p>\ Here is a paradise for those who are recovering from mental illness. Thank you for your visit.</p>
+            
+                <p>\ Ĉi tio estas paradizo por resaniĝintaj mensmalsanuloj. Ni bonvenigas vin kaj dankas vin pro via vizito.</p>
+            
+            </div>
+            </section>
+            <section>
+            <h4>You can see here</h4>
+                <ul>
+                
+                    <li>あしたの ことは しっている</li>
+                
+                    <li>I know what will happen tomorrow</li>
+                
+                    <li>イワシが つちから はえてくるんだ</li>
+                
+                    <li>Sardines will sprout from the ground and leap into the distance</li>
+                
+                    <li>えきの ホームに あながあく</li>
+                
+                    <li>A hole will open up on the station platform</li>
+                
+                    <li>すのこが きえるんだ</li>
+                
+                    <li>The floorboards will disappear</li>
+                
+                    <li>きのうの きおくは きえたけど</li>
+                
+                    <li>Although the memories of yesterday have vanished</li>
+                
+                    <li>きえたってことも よくわからないんだ</li>
+                
+                    <li>I don&#39;t even understand what &#34;vanished&#34; means</li>
+                
+                    <li>そらの うえから ビルがたつ</li>
+                
+                    <li>The building on the platform will rise up in the sky</li>
+                
+                    <li>めが みえなくなってきた</li>
+                
+                    <li>My eyesight is failing</li>
+                
+                </ul>
+            </section>
+            
+        </article>
+    
+    
+    
+        <article id="post-0">
+            <h2><a href="/en/posts/contact/">contact me</a></h2>
+            
+            tags:
+            
+            <div class="post-header">
+                @Smilewei <span class="timestamp">2025/08/18</span>
+            </div>
+            <p><p>Here are my contact details. Whether you want to make friends or provide feedback, you can contact me through these social media platforms.</p>
+<p>Jen estas miaj kontaktinformoj. Ĉu vi volas amikiĝi aŭ doni reagojn, vi povas kontakti min per ĉi tiuj sociaj amaskomunikiloj.</p>
+<hr>
+<ul>
+<li>
+<p>Telegram ：<a href="https://t.me/smilewei114514">@smilewei114514</a></p>
+</li>
+<li>
+<p>Twitter：<a href="https://twitter.com/smilewei114514">@围笑Smilewei</a></p>
+</li>
+<li>
+<p>Github：<a href="https://github.com/SSSSSmilewei">@SSSSSmilewei</a></p>
+</li>
+<li>
+<p>BlueSky：<a href="https://bsky.app/profile/smilewei114514.bsky.social">@smilewei114514.bsky.social</a></p>
+</li>
+<li>
+<p>Email：<a href="mailto:sssssmilewei@gmail.com">sssssmilewei@gmail.com</a></p>
+</li>
+<li>
+<p>Discord：<a href="https://discord.gg/HS6VHGC6">𝐒𝐦𝐢𝐥𝐞𝐰𝐞𝐢🍥</a></p>
+</li>
+</ul></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="full-content"></div>
+                
+            </div>
+            
+        </article>
+    
+        <article id="post-1">
+            <h2><a href="/en/posts/friends/">my friends</a></h2>
+            
+            tags:
+            
+            <div class="post-header">
+                @Smilewei <span class="timestamp">2025/08/18</span>
+            </div>
+            <p><p>There my friends!</p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="text-content"><p>If you&rsquo;d like to add me to your friends list, please <a href="/contact">contact me</a>. Thank you for your attention and support!</p>
+<p>Se vi …</p></div>
+                <div class="full-content" style="display: none;"><p>If you&rsquo;d like to add me to your friends list, please <a href="/contact">contact me</a>. Thank you for your attention and support!</p>
+<p>Se vi bezonas aldoni amikan ligilon, vi povas kontakti min per la kontaktinformoj listigitaj sur la <strong>Kiu mi estas</strong> pagho. Dankon pro via atento kaj kompanio!</p>
+<hr>
+<ul>
+<li>
+<p>橄榄菜 GanLanCai: <a href="https://ganlanc.at/">https://ganlanc.at/</a></p>
+<p><strong>Saluton!👋 Mi estas GanLanCai🥬~</strong></p>
+</li>
+<li>
+<p>瑞米 Remik1r3n: <a href="https://blog.remiki.ren/">https://blog.remiki.ren/</a></p>
+<p><strong>There are Remi&rsquo;s Blog。</strong></p>
+</li>
+<li>
+<p>泠妄 LingWang: <a href="https://www.wcysite.com/">https://www.wcysite.com/</a></p>
+<p><strong>LingWang | meow ~</strong></p>
+</li>
+<li>
+<p>Neko205: <a href="https://blog.neko25.top/">https://blog.neko25.top/</a></p>
+<p><strong>届ける言葉を今は育ててる。</strong></p>
+</li>
+<li>
+<p>Midori Kurage: <a href="https://mdrkrg.github.io/notes/">https://mdrkrg.github.io/notes/</a></p>
+<p><strong>Jiraikei（mines）</strong></p>
+</li>
+<li>
+<p>moimo: <a href="https://moi-mo.github.io/">https://moi-mo.github.io/</a></p>
+<p><strong>Heaven, please sing for me a song of life.</strong></p>
+</li>
+<li>
+<p>and more&hellip;</p>
+</li>
+</ul></div>
+                <summary class="read-more-btn" onclick="toggleReadMore('post-1')" style="display: inline;">read more</summary>
+                
+            </div>
+            
+        </article>
+    
+        <article id="post-2">
+            <h2><a href="/en/posts/introduction/">我是谁 Kiu mi estas</a></h2>
+            
+            tags:
+            
+            <div class="post-header">
+                @Smilewei <span class="timestamp">2025/08/18</span>
+            </div>
+            <p><p>你好呀！这里记录着关于我的一切（大概）。</p>
+<hr></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="text-content"><h2 id="我是谁-kiu-mi-estas">我是谁？ kiu mi estas?</h2>
+<p>Saluton! Mi estas <strong>Smilewei</strong>.👋</p>
+<p>叫我<strong>围笑</strong>or<strong>山猫猫</strong>就好，Smilewei、Shanmeow、Ujmcmc都是我。</p>
+<p>来自<a href="https://zh.wikipedia.org/wiki/%E6%9E%A3%E5%BA%84%E5%B8%82"><strong>山东枣庄</strong></a>，现在在<a href="http://www.hieu.edu.cn/"><strong>长沙</strong></a>上大学，计科生desu。</p>
+<hr>
+<p>说真的我真 …</p></div>
+                <div class="full-content" style="display: none;"><h2 id="我是谁-kiu-mi-estas">我是谁？ kiu mi estas?</h2>
+<p>Saluton! Mi estas <strong>Smilewei</strong>.👋</p>
+<p>叫我<strong>围笑</strong>or<strong>山猫猫</strong>就好，Smilewei、Shanmeow、Ujmcmc都是我。</p>
+<p>来自<a href="https://zh.wikipedia.org/wiki/%E6%9E%A3%E5%BA%84%E5%B8%82"><strong>山东枣庄</strong></a>，现在在<a href="http://www.hieu.edu.cn/"><strong>长沙</strong></a>上大学，计科生desu。</p>
+<hr>
+<p>说真的我真的不会自我介绍了，这真是和高中的我写几百字的bio形成鲜明对比啊（</p>
+<p>由于对自己、对社会解构了太多，已经不会做任何的建构了。</p>
+<p>但还是觉得，总得稍微试着讲一讲自己是谁啊，怀着这样的心情<strong>写下了这段文字</strong></p>
+<hr>
+<p>我玩了很久的音乐游戏，移动端和街机都有涉猎，目前最主要玩的还是<a href="https://maimai.sega.jp/"><strong>maimaiでらっくす</strong></a></p>
+<p>虽然已经好久没有接触了，但是毫无疑问，<a href="https://www.undertale.com/"><strong>UNDERTALE</strong></a>是对我而言最重要的游戏作品。</p>
+<p>我喜欢人文社会科学，<del>如果你在2022年之前认识我，可能记得我当网左网哲的黑历史</del>。认真而言，我现在会有在的想找回曾经学习研究哲学社科的热情，或许你会重新看到我发表的暴论（？）</p>
+<p>我喜欢<a href="https://mzh.moegirl.org.cn/VOCALOID">术力口</a>、<a href="https://zh.moegirl.tw/%E7%94%B5%E5%AD%90%E9%9F%B3%E4%B9%90">电子乐</a>、<a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E9%BE%90%E5%85%8B">后朋克</a>和<a href="https://zh.moegirl.tw/%E9%9F%B3MAD">音Mad</a>，但是并没有混其中的任何圈子，也不是某位创作者的粉丝，我只是单纯的喜欢这些作品而已。你可以看看我的安利列表来理解我不小众也不独特的品味（xx）</p>
+<p>计算机科学方面，事实上我在很久之前就感兴趣并学习过，但从未深入。现在的我的确是一个新手，努力记录我在学习中的点点滴滴。</p>
+<p>养了一只小猫，也是我的爱人，她叫<strong>婭婭</strong>。她有<a href="https://zh.wikipedia.org/wiki/%E8%BE%B9%E7%BC%98%E5%9E%8B%E4%BA%BA%E6%A0%BC%E9%9A%9C%E7%A2%8D">BPD</a>，有太多值得讲的事情了，我永远深爱着她。</p>
+<p>也因为照顾BPD的经验，我自认为还蛮会照顾所有人的。</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E9%82%81%E7%88%BE%E6%96%AF-%E5%B8%83%E9%87%8C%E6%A0%BC%E6%96%AF%E9%A1%9E%E5%9E%8B%E6%8C%87%E6%A8%99">MBTI</a>是<a href="https://zh.wikipedia.org/wiki/ENFJ">ENFJ</a>，尽管我不怎么搞这些了。</p>
+<p>大概就如此了吧，或许未来还会在写些什么呢？</p>
+<hr>
+<p>我会尽可能不使用<a href="https://zh.wikipedia.org/wiki/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><strong>人工智能技术</strong></a>进行文章写作，尽管这会暴露出我生涩的文笔，但我写博客的初衷更多的还是写<strong>我想写的东西</strong>。</p>
+<p>我会尽可能不去删除写过的文章，尽管未来的我可能会被这些文字尴尬到，我也想保留下来，因为这是我的一部分，是我的来时路。</p>
+<hr>
+<h2 id="按照惯例的目标表">按照惯例的目标表&hellip;?</h2>
+<p>[ ✓ ] 考上大学，和喜欢的人在一起</p>
+<p>[ ✓ ] 可以过上天天吃麦当劳、坐地铁、出勤打音游的<strong>现代生活</strong></p>
+<p>[ - ] 治好<strong>婭婭</strong>的精神病</p>
+<p>[ - ] 获得一次足够骄傲的比赛成就</p>
+<p>[ - ] 制作出一部<strong>音Mad</strong>作品（<strong>术力口</strong>作品）</p>
+<p>[ - ] 成功实现把爱好变现收入</p>
+<p>[ - ] 拥有可以投入工作的<strong>英语/日语</strong>能力</p>
+<p>[ - ] 考研上岸?（或者找到满意的工作）</p>
+<p><del>[❎] 实现<strong>共产主义</strong>社会</del></p>
+<p><del>[❎] 吃糖和完成<strong>变猫手术</strong></del></p></div>
+                <summary class="read-more-btn" onclick="toggleReadMore('post-2')" style="display: inline;">read more</summary>
+                
+            </div>
+            
+        </article>
+    
+        <article id="post-3">
+            <h2><a href="/en/posts/favorite/"></a></h2>
+            
+            tags:
+            
+            <div class="post-header">
+                @ <span class="timestamp">0001/01/01</span>
+            </div>
+            <p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="full-content"></div>
+                
+            </div>
+            
+        </article>
+    
+    
+    <script>
+    window.addEventListener('click', e => {
+        let dropboxs = document.getElementsByClassName("dropbox-content");
+        let dropbox_btns = document.getElementsByClassName("dropbox-btn");
+
+        if (dropbox_btns.namedItem(e.target.id) != null) return;
+
+        if(dropboxs.namedItem(e.target.id) == null) {
+            for (let i = 0; i < dropboxs.length; i++) {
+                dropboxs[i].removeAttribute("visible");
+            }
+        }
+    }, true)
+
+    function toggleReadMore(id) {
+        var post = document.getElementById(id)
+        var fullContent = post.getElementsByClassName("full-content")[0];
+        var btnText = post.getElementsByClassName("read-more-btn")[0];
+        var textContent = post.getElementsByClassName("text-content")[0];
+
+        if (fullContent.style.display === "none") {
+            textContent.style.display = "none";
+            fullContent.style.display = "inline";
+            btnText.innerHTML = "read less";
+        } else {
+            textContent.style.display = "inline";
+            fullContent.style.display = "none";
+            btnText.innerHTML = "read more";
+        }
+    }
+
+    function toggleDropbox(id) {
+        let dropbox = document.getElementById(id);
+
+        dropbox.toggleAttribute("visible");
+    }
+    </script>
+    </main>
+
+    
+</main>
+</body>
+</html>
