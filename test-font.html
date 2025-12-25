@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,23 +15,21 @@
         .test-zpix {
             font-family: 'zpix', sans-serif;
             font-size: 24px;
-            color: black;
-            margin: 20px;
         }
         
         .test-default {
             font-family: sans-serif;
             font-size: 24px;
-            color: black;
-            margin: 20px;
         }
     </style>
 </head>
 <body>
     <h1>字体测试页面</h1>
-    <div class="test-zpix">这是使用 zpix 字体显示的文本</div>
-    <div class="test-default">这是使用默认字体显示的文本</div>
-    <p>如果上面两行文本显示的字体不同，说明 zpix 字体加载成功。</p>
-    <p>如果字体相同，可能是字体文件路径错误或浏览器缓存问题。</p>
+    <div class="test-zpix">
+        这是使用 zpix.ttf 字体显示的文本。如果字体加载成功，应该看到像素风格的文字。
+    </div>
+    <div class="test-default">
+        这是使用默认字体显示的文本，用于对比。
+    </div>
 </body>
 </html>
