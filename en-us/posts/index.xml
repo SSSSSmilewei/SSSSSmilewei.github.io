@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>posts on &gt;·Smilewei is Shanmeow·&lt;</title>
-    <link>https://SSSSSmilewei.github.io/en-us/posts/</link>
+    <link>http://localhost:3370/en-us/posts/</link>
     <description>Recent content in posts on &gt;·Smilewei is Shanmeow·&lt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://SSSSSmilewei.github.io/en-us/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:3370/en-us/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>contact me</title>
-      <link>https://SSSSSmilewei.github.io/en-us/posts/contact/</link>
+      <link>http://localhost:3370/en-us/posts/contact/</link>
       <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://SSSSSmilewei.github.io/en-us/posts/contact/</guid>
+      <guid>http://localhost:3370/en-us/posts/contact/</guid>
       <description>&lt;p&gt;Here are my contact details. Whether you want to make friends or provide feedback, you can contact me through these social media platforms.&lt;/p&gt;&#xA;&lt;p&gt;Jen estas miaj kontaktinformoj. Ĉu vi volas amikiĝi aŭ doni reagojn, vi povas kontakti min per ĉi tiuj sociaj amaskomunikiloj.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Telegram ：&lt;a href=&#34;https://t.me/smilewei114514&#34;&gt;@smilewei114514&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Twitter：&lt;a href=&#34;https://twitter.com/smilewei114514&#34;&gt;@围笑Smilewei&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Github：&lt;a href=&#34;https://github.com/SSSSSmilewei&#34;&gt;@SSSSSmilewei&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;BlueSky：&lt;a href=&#34;https://bsky.app/profile/smilewei114514.bsky.social&#34;&gt;@smilewei114514.bsky.social&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Email：&lt;a href=&#34;mailto:sssssmilewei@gmail.com&#34;&gt;sssssmilewei@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Discord：&lt;a href=&#34;https://discord.gg/HS6VHGC6&#34;&gt;𝐒𝐦𝐢𝐥𝐞𝐰𝐞𝐢🍥&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>my friends</title>
-      <link>https://SSSSSmilewei.github.io/en-us/posts/friends/</link>
+      <link>http://localhost:3370/en-us/posts/friends/</link>
       <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://SSSSSmilewei.github.io/en-us/posts/friends/</guid>
+      <guid>http://localhost:3370/en-us/posts/friends/</guid>
       <description>&lt;p&gt;There are my friends!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Who I am?</title>
-      <link>https://SSSSSmilewei.github.io/en-us/posts/introduction/</link>
+      <link>http://localhost:3370/en-us/posts/introduction/</link>
       <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://SSSSSmilewei.github.io/en-us/posts/introduction/</guid>
+      <guid>http://localhost:3370/en-us/posts/introduction/</guid>
       <description>&lt;p&gt;Hi there! This is where I jot down everything about me (maybe).&lt;/p&gt;&#xA;&lt;hr&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://SSSSSmilewei.github.io/en-us/posts/favorite/</link>
+      <link>http://localhost:3370/en-us/posts/favorite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://SSSSSmilewei.github.io/en-us/posts/favorite/</guid>
+      <guid>http://localhost:3370/en-us/posts/favorite/</guid>
       <description></description>
     </item>
   </channel>
