@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta name="generator" content="Hugo 0.159.0">
+    <title>&gt;·圍笑就是山貓貓·&lt;</title>
+    <link rel="canonical" href="https://SSSSSmilewei.github.io/">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+    
+    <meta name="description" content="">
+    
+    
+    
+    <style>
+
+
+
+
+    
+
+
+:root {
+    --site-bg: url("/flowertile.png");
+    --accent-color: #f55cc0;
+    --select-color: #ffc1e9;
+    --link-color: #5083C1;
+    --bg-color: #CEEAFF;
+    --text-color: #191919;
+    --bg-color2: white;
+    --border-color: #215697;
+    --special-text-color: #215697;
+    --post-header-color: white;
+    --post-shadow-color: #21569760;
+    --outline-color: #6EAAD6;
+    --outline-color2: #CEEAFF;
+    --list-style-type: "";
+    --list-style-image: url("/flower.png");
+}
+
+@font-face {
+    font-family: 'zpix';
+    src: url('/Fonts/Zpix.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-color) #00000000;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    -webkit-border-radius: .3rem;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+::selection {
+    background: var(--select-color);
+    color: var(--border-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: var(--site-bg);
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+p {line-height: 1.5em;}
+
+div.tags {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: .5rem 0;
+}
+
+div.tags > p.tags {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+div.tags > a {
+    margin-top: .5rem;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: var(--post-header-color);
+    filter: drop-shadow(2px 0 0 var(--outline-color)) drop-shadow(0 2px 0 var(--outline-color)) drop-shadow(-2px 0 0 var(--outline-color)) drop-shadow(0 -2px 0 var(--outline-color))drop-shadow(0 1px 1px var(--outline-color2)) drop-shadow(1px 0 1px var(--outline-color2));
+}
+
+h4,
+h5,
+h6 {color: var(--special-text-color);}
+
+header {
+    background-size: 100%;
+    background-position: center;
+    min-height: 80px;
+    margin: 0 0;
+    align-content: center;
+}
+
+header > h1 {
+    background-color: var(--bg-color2);
+    color: var(--special-text-color);
+    margin: 0 auto;
+    font-size: 2em;
+ 
+     
+    max-width: 48rem;
+    padding: 6px 12px;
+    border-radius: 1em;
+    border: 4px double var(--outline-color);
+    filter: none;
+    text-align: center;
+}
+
+ul.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+
+ul.tags {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+ul.tags li {
+    display: inline-block;
+    margin: 0 .2rem;
+}
+
+li.page-item {
+    list-style: none;
+}
+
+li.page-item a{
+    display: inline-flex;
+    font-size: 1rem;
+    margin: .2rem;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    padding: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    margin-bottom: 1em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+
+    text-decoration: none;
+    user-select: none;
+}
+
+li.page-item.active a{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+li.page-item.disabled a{
+    cursor: not-allowed;
+}
+
+li.page-item:not(.disabled):not(.active) a:hover{
+    background-color: var(--select-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+li {
+    
+        list-style-image: var(--list-style-image);
+    
+    margin-bottom: 5px;
+}
+
+nav {margin: 1em;}
+
+nav.links > ul {
+    max-width: 960px;
+    margin: auto;
+    line-height: 3rem;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: space-evenly;
+}
+
+nav.links li {
+    text-align: center;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+nav.links li > a {
+    font-weight: bold;
+    background-color: var(--bg-color);
+    border: 4px double var(--outline-color);
+    padding: .5em 3em;
+    text-decoration: none;
+}
+
+nav.links li > a:visited {color: var(--link-color);}
+nav.links li > a:hover {
+    color: var(--accent-color);
+    background-color: var(--select-color);
+}
+
+nav.languages {
+    margin: .3em;
+    text-align: center;
+}
+
+
+nav.languages ul {
+    display: inline-block;
+}
+
+nav.languages ul li {
+    display: inline-block;
+}
+
+a {
+    color: var(--link-color);
+    border-radius: .3em;
+    transition: .2s ease-out;
+}
+
+a:visited {
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: .2s ease;
+}
+
+#sidebar {
+    background-color: var(--bg-color2);
+    color: var(--special-text-color);
+    height: fit-content;
+    min-width: 320px;
+    margin-top: 1em;
+    margin-right: 2em;
+    border-radius: .5em;
+}
+
+.small-box {
+    max-width: 240px;
+    margin: auto;
+    border: 2px solid var(--bg-color);
+    font-size: 11px;
+    line-height: 1.5rem;
+}
+
+#avatar {
+    margin: .5em;
+    max-width: 320px;
+}
+
+ 
+.flower {
+    width: 300px; 
+    aspect-ratio: 1;
+    
+    
+        --g:/37.02% 37.02% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+        mask: 90.078% 79.895% var(--g),33.953% 97.355% var(--g),0.004% 49.372% var(--g),35.148% 2.257% var(--g),90.817% 21.121% var(--g),radial-gradient(100% 100%,#000 25.476%,#0000 calc(25.476% + 1px));
+    
+    
+}
+
+#bio {
+    margin: 20px;
+    padding: .2em;
+    background: var(--bg-color);
+    border: 4px double var(--bg-color2);
+    border-radius: 2em;
+    font-size: small;
+}
+
+#bio p { margin: 1em; }
+
+#content {
+    display: flex;
+    max-width: 960px;
+    margin: auto;
+}
+
+main {
+    padding: 1em;
+    padding-top: 0;
+}
+
+#top {
+    background-color: var(--bg-color);
+}
+
+#top section {
+    background-color: var(--bg-color2);
+    border-radius: .5em;
+    margin-bottom: 10px;
+    padding: .5em 1em;
+    width: 100%;
+}
+
+article {
+    background-color: var(--bg-color2);
+    padding: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    margin-bottom: 1em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+}
+article img {
+    max-width: 100%;
+}
+
+.readmore summary {
+    font-weight: bold;
+    color: var(--special-text-color);
+    list-style: none;
+    cursor: pointer;
+}
+
+header h1 a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--special-text-color);
+}
+
+header h1 a:visited {
+    color: inherit;
+}
+
+header h1 a:hover {
+    color: inherit;
+}
+
+.readmore div {
+    display: inline;
+}
+
+.readmore div p {
+    display: inline;
+}
+
+.readmore summary::-webkit-details-marker {
+  display: none;
+}
+
+.readmore[open] > summary {
+    border-bottom: 2px dashed var(--bg-color);
+    padding-bottom: .6em;
+    margin-bottom: .6em;
+}
+
+.post-header {
+    color: var(--special-text-color);
+    font-weight: bold;
+    padding: .5rem 0;
+    border-bottom: 4px double var(--outline-color);
+}
+
+.timestamp {
+    font-weight: normal;
+    font-size: smaller;
+    margin: .2em;
+    float: right;
+}
+
+.tag-item p {
+    font-size: smaller;
+}
+
+.photosetx2,
+.photosetx3 {
+    display: grid;
+    gap: 4px;
+    align-items: center;
+}
+
+.photosetx2 {grid-template-columns: 1fr 1fr;}
+.photosetx3 {grid-template-columns: 1fr 1fr 1fr;}
+
+.cropped {
+    width: 156px;
+    height: 156px;
+    overflow: hidden;
+    object-position: 25% 25%;
+}
+.photosetx2 img,
+.photosetx3 img {object-fit: cover;}
+
+.center { text-align: center; }
+
+.img-right {
+    max-width: 7.5em;
+    max-height: 7.5em;
+    float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.small-text {
+    font-size: 11px;
+    text-shadow: var(--bg-color) 1px 1px;
+}
+
+.dropbox-btn {
+    color: var(--link-color);
+    font-weight: bold;
+    background-color: var(--bg-color);
+     
+    border: 1px solid var(--outline-color);
+     
+    text-decoration: none;
+}
+
+.dropbox-content[visible] {
+    display: block;
+}
+
+.dropbox-content {
+    display: none;
+    position: absolute;
+    z-index: 1
+}
+
+.table-of-contents {
+    background-color: var(--bg-color2);
+    padding: .3em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+}
+
+.table-of-contents.sidebar {
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
+    width: 10rem;
+    flex-shrink: 0;
+    max-height: calc(100vh - 2rem);
+    overflow-x: auto;
+}
+
+.table-of-contents.float {
+    width: max-content;
+    max-width: 50vw;
+    max-height: 50%;
+    overflow: auto;
+}
+
+.table-of-contents nav {
+    margin: 0 .5em;
+}
+
+.table-of-contents nav ul {
+    margin: .5em 1em;
+    padding: 0;
+}
+
+.table-of-contents nav li {
+    margin: .3em 0;
+}
+
+#single-post {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#single-post > article {
+    max-width: 48rem
+}
+
+#single-post > article > #post-toc-mobile {
+    display: none;
+}
+
+ 
+@media only screen and (max-width: 800px) {
+    #content {
+        flex-wrap: wrap;
+    }
+    #sidebar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 0;
+        margin-right: 0;
+        margin-bottom: 1em;
+        border-radius: .3em;
+    }
+    header {min-height: 110px;}
+    header > h1 { 
+        width: fit-content;
+        padding: .3em 1em;
+    }
+    nav.links > ul {
+     
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #bio {width: 50%;}
+    
+    #sidebar ul {
+        line-height: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    #sidebar > .small-box li {
+        margin: .3em 1em;
+    }
+
+    #single-post > .table-of-contents.sidebar {
+        display: none;
+    }
+
+    #single-post > article > #post-toc-mobile {
+        display: inline;
+    }
+}
+
+pre {
+    border:1px solid var(--outline-color);
+    border-radius:6px;
+    padding:0.75rem 1rem;
+    margin:1.2rem 0;
+    overflow-x:auto;  
+}
+.spoiler { background-color:#000; color:#000; border-radius:.25em; padding:0 .25em; cursor:help; transition:.2s ease-out; }
+.spoiler:hover, .spoiler:focus { background-color:transparent; color:var(--text-color); outline:none; }
+.spoiler a, .spoiler a:visited { color:inherit; text-decoration:none; }
+.spoiler:hover a, .spoiler:focus a { color:var(--link-color); }
+.spoiler-block { display:inline-block; }
+.spoiler-box { display:inline-block; min-width:6em; padding:.25em .4em; text-align:center; }
+.userbox-card { display:inline-flex; align-items:center; border:2px solid var(--outline-color); border-radius:6px; overflow:hidden; margin:6px 6px 6px 0; box-shadow:0 1px 2px var(--post-shadow-color); vertical-align:top; max-width:100%; }
+.userbox-id { min-width:64px; padding:8px 10px; font-weight:bold; text-align:center; border-right:2px solid var(--outline-color); }
+.userbox-body { display:flex; align-items:center; gap:8px; padding:8px 10px; }
+.userbox-icon { width:24px; height:24px; object-fit:contain; }
+</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta charset="utf-8">
+</head>
+<body>
+        <header><h1 id="&gt;·圍笑就是山貓貓·&lt;"><a href="https://SSSSSmilewei.github.io/">&gt;·圍笑就是山貓貓·&lt;</a></h1></header>
+<main>
+    
+    
+    <nav class="languages links">
+        <ul>
+        
+        <li>
+            <a href="/en-us/">English</a>
+        </li>
+        
+        </ul>
+    </nav>
+    
+    <div id="content">
+    <aside id="sidebar">
+        <div id="avatar">
+            
+            <img class="flower" src="/images/smilewei.jpg">
+            
+        </div>
+        
+        <div id="bio">
+        
+            <p>永持<strong>希望</strong>，
+保持<strong>圍笑</strong>。</p>
+<p>Always <strong>Hopeful</strong> and keep your <strong>Smilewei</strong>.</p>
+<p>Ĉiam <strong>Esperplena</strong> kaj konservu vian <strong>Ridetowein</strong>.</p>
+
+        
+        </div>
+        
+        <div class="small-box">
+            
+            </ul>
+        </div>
+
+        
+        <div>
+            <div class="tags">
+                <p class="tags">Tags</p>
+            </div>
+
+            <ul class="tags">
+            
+            
+            
+            <li><a href="https://SSSSSmilewei.github.io/tags/important/">important</a></li><li><a href="https://SSSSSmilewei.github.io/tags/readme/">README</a></li>
+            </ul>
+            
+            <div class="tags">
+                <a href="/tags"><b>更多标签...</b></a>
+            </div>
+        </div>
+        
+        
+        
+        <nav class="links">
+            <ul>
+            
+            
+                <li><a href="/posts/introduction/">我是谁 Kiu mi estas</a></li>
+            
+                <li><a href="/posts/contact/">与我联系 Kontaktu min</a></li>
+            
+                <li><a href="/posts/friends/">浮莲子们 Mia amiko</a></li>
+            
+                <li><a href="/posts/favorite/">安利列表 Favorataj </a></li>
+            
+            
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div id="top" class="clearfix">
+            
+            <article>
+            <div class="img-right">
+                <img src="/images/bio.png">
+            </div>
+            <div>
+            <h1>Saluton👋! Mi estas Smilewei!</h1>
+            
+                <p>\ 你好呀，叫我围笑或者山猫猫就好！</p>
+            
+                <p>\ Saluton, mi estas Smilewei!</p>
+            
+                <p>\ 这里是一个已愈精神病人的乐园，喜欢您来，也感谢您来到这里。</p>
+            
+                <p>\ Ĉi tio estas paradizo por resaniĝintaj mensmalsanuloj. Ni bonvenigas vin kaj dankas vin pro via vizito.</p>
+            
+            </div>
+            </article>
+            <article>
+            <h4>你可以在这里看到：</h4>
+                <ul>
+                
+                    <li>あしたの ことは しっている</li>
+                
+                    <li>明天的事情我也非常的知晓</li>
+                
+                    <li>イワシが つちから はえてくるんだ</li>
+                
+                    <li>沙丁鱼从土里钻出向着远方跳</li>
+                
+                    <li>えきの ホームに あながあく</li>
+                
+                    <li>车站的月台上开出了隧道</li>
+                
+                    <li>すのこが きえるんだ</li>
+                
+                    <li>地板也跟着一并消失掉</li>
+                
+                    <li>きのうの きおくは きえたけど</li>
+                
+                    <li>虽然昨天的记忆已经消逝了</li>
+                
+                    <li>きえたってことも よくわからないんだ</li>
+                
+                    <li>但是何谓那“消逝”我也不能够明晰</li>
+                
+                    <li>そらの うえから ビルがたつ</li>
+                
+                    <li>埋葬于青空里高楼的身影</li>
+                
+                    <li>めが みえなくなってきた</li>
+                
+                    <li>已无法再映入我眼里</li>
+                
+                </ul>
+            </article>
+            
+        </div>
+    
+    
+    
+        <article id="post-0">
+            <h2><a href="/posts/queer/">Queer</a></h2>
+            
+            tags:
+            
+            <a href="/tags/%e6%97%a5%e5%b8%b8%e6%91%84%e5%bd%b1">日常摄影</a>
+            
+            <div class="post-header">
+                @Smilewei <span class="timestamp">2026/03/26</span>
+            </div>
+            <p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="text-content"></div>
+                <div class="full-content" style="display: none;"></div>
+                <summary class="read-more-btn" onclick="toggleReadMore('post-0')" style="display: inline;">阅读更多</summary>
+                
+            </div>
+            
+        </article>
+    
+        <article id="post-1">
+            <h2><a href="/posts/weekwrite1/">滨寿司打工，回忆幻想，守护惊奇、细腻、灵性</a></h2>
+            
+            tags:
+            
+            <a href="/tags/%e6%89%80%e6%80%9d%e6%89%80%e6%83%b3">所思所想</a>
+            
+            <div class="post-header">
+                @Smilewei <span class="timestamp">2026/03/09</span>
+            </div>
+            <p><p>我想写一篇长文。</p>
+<p>收拾好了桌面，就在实验室里对着电脑做了一整天。试着乱调了一下UTAU，研究了一下本地跑了个大模型，又把自己的iPod刷了还算一个满意的主题。一天下来几乎没怎么看手机，很喜欢这种专注的感觉。</p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="text-content"><p>我真的很想要去专注的多做一些事情，但是几乎每件事情都是做了个 …</p></div>
+                <div class="full-content" style="display: none;"><p>我真的很想要去专注的多做一些事情，但是几乎每件事情都是做了个差不多就没再去碰，我也不知道到底要研究到什么地步才叫做“掌握了这项技能”，就只好每天多做一些事情吧。我确实应该做一些更科学的时间管理和任务规划，但是研究这个管理也丢进了我的TO DO LIST。</p>
+<p>入职了滨寿司，其实一小时22元的时薪很好了，刷盘子的工作还是比较累的。但是我这段时间确实有些缺钱，再加上工作环境很愉快，就当锻炼锻炼身体了，我还年轻嘛！</p>
+<p>我是天蝎座，初中的时候和同学聊天，总是会说天蝎座是很记仇的人。我不知一次思考过，我是不是记仇的人呢？我其实还蛮记仇的，如果让我伤心难过了，我会一直记在心里然后开始幻想在未来的哪一天狠狠的超越那些欺负我的人。但亦或是自己终究麻木了，亦或是自己能力确实没那么强，到了若干年之后，这股气最终转换成了“曾经的坏想法”罢了。</p>
+<p>但是人总是好难好难满足的。初中的时候我想逃离枣庄，逃离家里人——那时候的我幻想着，有什么女仆店，我逃到了哪里，一边打工，一边上学，最终过上了想要的生活；我还幻想着，幻想着能被有钱的吸血鬼姐姐带到无忧无虑可以自己生活的公寓，幻想着能造出来一个和我一模一样的机器人代替我上学、工作、结婚生子——这样我就能在妈妈不伤心的情况下自由地活着了。我曾经真的很喜欢幻想，或许这是我曾经的灵性所在。现在不怎么幻想了，因为我要守护另一个爱幻想的小猫的梦，可是也越来越觉得自己变得麻木、变得理所当然、变得没那么细腻了。</p>
+<p>我习惯了太多事情，</p>
+<p>我习惯了性少数在这边土地下是见不得人的、</p>
+<p>我习惯了不公平的社会资源分配环境、</p>
+<p>我习惯了男性网民在互联网上的第一性发言、</p>
+<p>我习惯了对一切政治意识形态的解构娱乐、</p>
+<p>我习惯了无源头的恶意和偏见、</p>
+<p>我习惯了战争和互联网战争。</p>
+<p>可我也慢慢不知道我是谁，我应该如何，我们应该如何了。其实人也并非不能麻木地或者，但总觉得，不对，不应该，我不应该就这么忍受下去。</p>
+<p>我很害怕我成为无聊的大人，所以我一直在守护着自己所有的惊奇。我小心翼翼地保护着自己每一份新鲜体验，</p>
+<p>我还会因为去麦当劳用点餐机点餐而感到幸福、</p>
+<p>我还会因为坐地铁随着列车的加速度而感到幸福、</p>
+<p>我还会因为学校发新书撕开塑封阅读目录而感到幸福、</p>
+<p>我还会因为在机厅出勤切实地帮助到了新玩家而感受到幸福、</p>
+<p>最重要的是，我已经离开束缚的环境，我实现了过去自己想要的生活，我可以做很多事情，我真的很幸福。</p>
+<p>我其实没什么勇气去拥抱过去的自己的，因为我现在的生活也还是一团乱麻。但我的确没辜负过去自己对我的期待，我过上了她想要的生活。那也让我成为过去的自己吧，我相信她也一定会有底气地过上我现在想要的一切的。</p>
+<p>我打算这段时间多看一些思辨性强的书，我想找回我的灵性。</p>
+<p>写这段文字还是在三月八日，写完这段文字就已经是Miku日了。祝所有的女性友友们节日快乐，也祝你我在物质和精神上永远自由、敏锐、坚强。</p></div>
+                <summary class="read-more-btn" onclick="toggleReadMore('post-1')" style="display: inline;">阅读更多</summary>
+                
+            </div>
+            
+        </article>
+    
+        <article id="post-2">
+            <h2><a href="/posts/hugoreadme/">Hugo 常用指令与 Markdown 配置指南</a></h2>
+            
+            tags:
+            
+            <a href="/tags/README">README</a>
+            
+            <div class="post-header">
+                @Minjie <span class="timestamp">2025/12/06</span>
+            </div>
+            <p>详细介绍 Hugo 常用指令、Markdown Front Matter 配置、基本语法和实用技巧的完整指南</p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="text-content"><p>摘抄自 <a href="https://minjieblog.github.io/doc-intro/hugo-readme/"><strong>Minjie&rsquo;s Blog</strong></a>， 学习自用， …</p></div>
+                <div class="full-content" style="display: none;"><p>摘抄自 <a href="https://minjieblog.github.io/doc-intro/hugo-readme/"><strong>Minjie&rsquo;s Blog</strong></a>， 学习自用，未授权搬运致歉。</p>
+<h2 id="一hugo-常用指令">一、Hugo 常用指令</h2>
+<h3 id="11-创建新站点">1.1 创建新站点</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 创建一个新的 Hugo 站点</span>
+</span></span><span style="display:flex;"><span>hugo new site mysite
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 进入站点目录</span>
+</span></span><span style="display:flex;"><span>cd mysite
+</span></span></code></pre></div><h3 id="12-创建新文章">1.2 创建新文章</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 在 content/posts 目录下创建新文章</span>
+</span></span><span style="display:flex;"><span>hugo new posts/my-first-post.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 在 content 目录下创建文章</span>
+</span></span><span style="display:flex;"><span>hugo new about.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建在特定子目录</span>
+</span></span><span style="display:flex;"><span>hugo new blog/2024/new-post.md
+</span></span></code></pre></div><h3 id="13-本地预览">1.3 本地预览</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 启动本地开发服务器（默认 http://localhost:1313）</span>
+</span></span><span style="display:flex;"><span>hugo server
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 启动并显示草稿文章</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 启动并显示草稿、未来日期和过期的文章</span>
+</span></span><span style="display:flex;"><span>hugo server -DEF
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 指定端口</span>
+</span></span><span style="display:flex;"><span>hugo server --port <span style="color:#ae81ff">8080</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 实时重载并打开浏览器</span>
+</span></span><span style="display:flex;"><span>hugo server -D --navigateToChanged
+</span></span></code></pre></div><h3 id="14-主题管理">1.4 主题管理</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 添加主题（使用 Git submodule）</span>
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/username/theme-name.git themes/theme-name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 更新主题</span>
+</span></span><span style="display:flex;"><span>git submodule update --remote --merge
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除主题</span>
+</span></span><span style="display:flex;"><span>git submodule deinit -f themes/theme-name
+</span></span><span style="display:flex;"><span>rm -rf .git/modules/themes/theme-name
+</span></span><span style="display:flex;"><span>git rm -f themes/theme-name
+</span></span></code></pre></div><h3 id="15-其他常用指令">1.5 其他常用指令</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 查看 Hugo 版本</span>
+</span></span><span style="display:flex;"><span>hugo version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看帮助</span>
+</span></span><span style="display:flex;"><span>hugo help
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看配置信息</span>
+</span></span><span style="display:flex;"><span>hugo config
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列出所有内容</span>
+</span></span><span style="display:flex;"><span>hugo list all
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列出草稿</span>
+</span></span><span style="display:flex;"><span>hugo list drafts
+</span></span></code></pre></div><hr>
+<h2 id="二markdown-front-matter-配置">二、Markdown Front Matter 配置</h2>
+<h3 id="21-完整配置示例">2.1 完整配置示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span># 基本信息
+</span></span><span style="display:flex;"><span>title: &#34;我的第一篇文章&#34;
+</span></span><span style="display:flex;"><span>date: 2025-12-06T15:04:05+08:00
+</span></span><span style="display:flex;"><span>lastmod: 2025-12-07T10:00:00+08:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 作者信息
+</span></span><span style="display:flex;"><span>author: &#34;Minjie&#34;
+</span></span><span style="display:flex;"><span>authorLink: &#34;https://github.com/Minjie2003&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 分类和标签
+</span></span><span style="display:flex;"><span>categories: [&#34;技术&#34;]
+</span></span><span style="display:flex;"><span>tags: [&#34;Hugo&#34;, &#34;Markdown&#34;, &#34;博客&#34;]
+</span></span><span style="display:flex;"><span>series: [&#34;Hugo教程&#34;]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 摘要和描述
+</span></span><span style="display:flex;"><span>summary: &#34;这是一篇关于 Hugo 和 Markdown 的完整指南&#34;
+</span></span><span style="display:flex;"><span>description: &#34;详细介绍 Hugo 的使用方法和 Markdown 配置&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 特色图片
+</span></span><span style="display:flex;"><span>image: &#34;/images/featured.jpg&#34;
+</span></span><span style="display:flex;"><span>cover:
+</span></span><span style="display:flex;"><span>    image: &#34;/images/cover.jpg&#34;
+</span></span><span style="display:flex;"><span>    alt: &#34;封面图片描述&#34;
+</span></span><span style="display:flex;"><span>    caption: &#34;图片说明文字&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># SEO 相关
+</span></span><span style="display:flex;"><span>keywords: [&#34;Hugo&#34;, &#34;静态博客&#34;, &#34;Markdown&#34;]
+</span></span><span style="display:flex;"><span>slug: &#34;hugo-markdown-guide&#34;
+</span></span><span style="display:flex;"><span>url: &#34;/posts/hugo-guide/&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 显示控制
+</span></span><span style="display:flex;"><span>toc: true                    # 显示目录
+</span></span><span style="display:flex;"><span>comments: true               # 允许评论
+</span></span><span style="display:flex;"><span>showToc: true               # 显示目录
+</span></span><span style="display:flex;"><span>TocOpen: false              # 默认展开目录
+</span></span><span style="display:flex;"><span>hidemeta: false             # 隐藏元信息
+</span></span><span style="display:flex;"><span>disableShare: false         # 禁用分享按钮
+</span></span><span style="display:flex;"><span>hideSummary: false          # 隐藏摘要
+</span></span><span style="display:flex;"><span>ShowReadingTime: true       # 显示阅读时间
+</span></span><span style="display:flex;"><span>ShowBreadCrumbs: true       # 显示面包屑导航
+</span></span><span style="display:flex;"><span>ShowPostNavLinks: true      # 显示文章导航链接
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 权重（用于排序）
+</span></span><span style="display:flex;"><span>weight: 1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 外部链接
+</span></span><span style="display:flex;"><span>externalLink: &#34;https://example.com&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 是否在首页显示
+</span></span><span style="display:flex;"><span>showhome: true
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="22-常用字段说明">2.2 常用字段说明</h3>
+<table>
+  <thead>
+      <tr>
+          <th>字段</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>title</code></td>
+          <td>文章标题</td>
+          <td><code>&quot;我的文章&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>date</code></td>
+          <td>发布日期</td>
+          <td><code>2025-12-06</code> 或 <code>2025-12-06T15:04:05+08:00</code></td>
+      </tr>
+      <tr>
+          <td><code>draft</code></td>
+          <td>是否为草稿</td>
+          <td><code>true</code> / <code>false</code></td>
+      </tr>
+      <tr>
+          <td><code>tags</code></td>
+          <td>标签（数组）</td>
+          <td><code>[&quot;Hugo&quot;, &quot;博客&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>categories</code></td>
+          <td>分类（数组）</td>
+          <td><code>[&quot;技术&quot;, &quot;教程&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>summary</code></td>
+          <td>文章摘要</td>
+          <td><code>&quot;这是摘要&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>description</code></td>
+          <td>SEO 描述</td>
+          <td><code>&quot;页面描述&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>slug</code></td>
+          <td>URL 友好名称</td>
+          <td><code>&quot;my-post&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>url</code></td>
+          <td>自定义完整 URL</td>
+          <td><code>&quot;/posts/my-post/&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>weight</code></td>
+          <td>排序权重</td>
+          <td><code>1</code> (数字越小越靠前)</td>
+      </tr>
+      <tr>
+          <td><code>toc</code></td>
+          <td>是否显示目录</td>
+          <td><code>true</code> / <code>false</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="三hugoyaml">三、Hugo.yaml</h2>
+<h3 id="31-完整配置示例">3.1 完整配置示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">baseURL</span>: <span style="color:#e6db74">&#34;https://example.com/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">languageCode</span>: <span style="color:#e6db74">&#34;zh-cn&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Minjie Blog&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">theme</span>: <span style="color:#e6db74">&#34;PaperMod&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 默认内容语言</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">defaultContentLanguage</span>: <span style="color:#e6db74">&#34;zh-cn&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#排除某些文件夹</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">ignoreFiles</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#e6db74">&#34;content/obsidian/.*&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 分页设置</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">pagination</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pagerSize</span>: <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 构建配置</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">buildDrafts</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">buildFuture</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">buildExpired</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># URL 设置</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">permalinks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">posts</span>: <span style="color:#e6db74">&#34;/posts/:slug/&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Markdown 渲染设置</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">markup</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">goldmark</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">renderer</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">unsafe</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">highlight</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">style</span>: <span style="color:#e6db74">&#34;monokai&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">lineNos</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 站点参数</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">author</span>: <span style="color:#e6db74">&#34;Minjie&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Minjie 的技术博客&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;技术博客&#34;</span>, <span style="color:#e6db74">&#34;编程&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># 主题相关</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowReadingTime</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowPostNavLinks</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowBreadCrumbs</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowCodeCopyButtons</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># 首页信息</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">homeInfoParams</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Title</span>: <span style="color:#e6db74">&#34;欢迎来到 Minjie Blog&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Content</span>: <span style="color:#e6db74">&#34;记录编程学习和技术成长&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 菜单配置</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">menu</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">main</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">identifier</span>: <span style="color:#ae81ff">home</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">首页</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">identifier</span>: <span style="color:#ae81ff">posts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">文章</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/posts/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">identifier</span>: <span style="color:#ae81ff">categories</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">分类</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/categories/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">identifier</span>: <span style="color:#ae81ff">tags</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">标签</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/tags/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 分类和标签</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">taxonomies</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">category</span>: <span style="color:#ae81ff">categories</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">tags</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">series</span>: <span style="color:#ae81ff">series</span>
+</span></span></code></pre></div><h3 id="32-常用字段说明">3.2 常用字段说明</h3>
+<table>
+  <thead>
+      <tr>
+          <th>字段</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>baseURL</code></td>
+          <td>网站基础 URL</td>
+          <td><code>&quot;https://example.com/&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>languageCode</code></td>
+          <td>网站语言</td>
+          <td><code>&quot;zh-cn&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>title</code></td>
+          <td>网站标题</td>
+          <td><code>&quot;Minjie Blog&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>theme</code></td>
+          <td>使用的主题</td>
+          <td><code>&quot;PaperMod&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>pagination.pagerSize</code></td>
+          <td>每页文章数量</td>
+          <td><code>10</code></td>
+      </tr>
+      <tr>
+          <td><code>permalinks</code></td>
+          <td>URL 结构规则</td>
+          <td><code>&quot;/posts/:slug/&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>markup</code></td>
+          <td>Markdown 渲染配置</td>
+          <td>代码高亮、HTML支持</td>
+      </tr>
+      <tr>
+          <td><code>params</code></td>
+          <td>主题参数配置</td>
+          <td>作者、描述、UI设置</td>
+      </tr>
+      <tr>
+          <td><code>menu</code></td>
+          <td>网站导航菜单</td>
+          <td>首页 / 文章 / 标签</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="四markdown-基本语法">四、Markdown 基本语法</h2>
+<h3 id="41-标题">4.1 标题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 一级标题
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### 三级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#### 四级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">##### 五级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">###### 六级标题
+</span></span></span></code></pre></div><h3 id="42-文本样式">4.2 文本样式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>**粗体文字**
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体文字*</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">**</span>*粗斜体***
+</span></span><span style="display:flex;"><span><span style="color:#f92672">~~删除线~~</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`行内代码`</span>
+</span></span></code></pre></div><h3 id="43-列表">4.3 列表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 无序列表
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目 2
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 子项目 2.1
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 子项目 2.2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 有序列表
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 第一项
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 第二项
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">1.</span> 子项 2.1
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">2.</span> 子项 2.2
+</span></span></code></pre></div><h3 id="44-链接和图片">4.4 链接和图片</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 链接
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">带标题的链接</span>](<span style="color:#a6e22e">https://example.com &#34;鼠标悬停显示&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 图片
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">图片描述</span>](<span style="color:#a6e22e">/images/photo.jpg</span>)
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">图片</span>](<span style="color:#a6e22e">https://example.com/image.jpg &#34;图片标题&#34;</span>)
+</span></span></code></pre></div><h3 id="45-引用">4.5 引用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">这是一段引用文字
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">可以多行
+</span></span></span><span style="display:flex;"><span>&gt;&gt; 嵌套引用
+</span></span></code></pre></div><h3 id="46-代码块">4.6 代码块</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```python
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello, Hugo!&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```javascript
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span></code></pre></div><h3 id="47-表格">4.7 表格</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| 列1 | 列2 | 列3 |
+</span></span><span style="display:flex;"><span>|-----|-----|-----|
+</span></span><span style="display:flex;"><span>| 数据1 | 数据2 | 数据3 |
+</span></span><span style="display:flex;"><span>| 数据4 | 数据5 | 数据6 |
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 对齐方式
+</span></span><span style="display:flex;"><span>| 左对齐 | 居中 | 右对齐 |
+</span></span><span style="display:flex;"><span>|:-------|:----:|-------:|
+</span></span><span style="display:flex;"><span>| 内容   | 内容 | 内容   |
+</span></span></code></pre></div><h3 id="48-分隔线">4.8 分隔线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="font-style:italic">**</span>*
+</span></span><span style="display:flex;"><span>___
+</span></span></code></pre></div><h3 id="49-任务列表">4.9 任务列表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">- [x]</span> 已完成的任务
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> 未完成的任务
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> 另一个任务
+</span></span></code></pre></div><hr>
+<h2 id="五实用技巧">五、实用技巧</h2>
+<h3 id="51-文章模板">5.1 文章模板</h3>
+<p>在 <code>archetypes/default.md</code> 创建默认模板：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
+</span></span><span style="display:flex;"><span>date: {{ .Date }}
+</span></span><span style="display:flex;"><span>draft: true
+</span></span><span style="display:flex;"><span>tags: []
+</span></span><span style="display:flex;"><span>categories: []
+</span></span><span style="display:flex;"><span>summary: &#34;&#34;
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 简介
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>内容开始...
+</span></span></code></pre></div><h3 id="52-多语言配置">5.2 多语言配置</h3>
+<p>在 Front Matter 中：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;English Title&#34;
+</span></span><span style="display:flex;"><span>title.zh: &#34;中文标题&#34;
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="53-自定义-url-结构">5.3 自定义 URL 结构</h3>
+<p>在 <code>hugo.toml</code> 中：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">permalinks</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">posts</span> = <span style="color:#e6db74">&#34;/:year/:month/:slug/&#34;</span>
+</span></span></code></pre></div><h3 id="54-草稿快速发布">5.4 草稿快速发布</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 将草稿改为发布状态</span>
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;s/draft: true/draft: false/&#39;</span> content/posts/my-post.md
+</span></span></code></pre></div><hr>
+</div>
+                <summary class="read-more-btn" onclick="toggleReadMore('post-2')" style="display: inline;">阅读更多</summary>
+                
+            </div>
+            
+        </article>
+    
+        <article id="post-3">
+            <h2><a href="/posts/week_index/"></a></h2>
+            
+            tags:
+            
+            <div class="post-header">
+                @ <span class="timestamp">0001/01/01</span>
+            </div>
+            <p><h1 id="-motoo">✒️ <em>MOTOO</em></h1>
+<p>// <em>Write down some words you’ve enjoyed this week—anything at all. Let them serve as a symbol of your week.</em></p>
+<h1 id="-always_"><em>📚 Always_todoLIST</em></h1>
+<p>// <em>Write down EVERYTHING you want to do—don&rsquo;t worry too much about it. Think of this simply as a storage bin; you can <strong>keep it hidden away</strong> during your daily routine.</em></p>
+<h1 id="-to-do-list">📝 To-Do LIST!</h1>
+<p>// <em>This is the real To-Do LIST! Write down your tasks for the week and do your best to complete them! 💪</em></p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="text-content"><h1 id="-weather">☀️ Weather</h1>
+<p>// <em>Make a note of …</em></p></div>
+                <div class="full-content" style="display: none;"><h1 id="-weather">☀️ Weather</h1>
+<p>// <em>Make a note of the weather—no need for great detail; simply noting whether it&rsquo;s cloudy or sunny will suffice. <strong>Don&rsquo;t forget to consider how the weather affects your mood.</strong></em></p>
+<h1 id="-working">💴 Working</h1>
+<p>// <em>Write about your job. This is <strong>just work</strong>, work done solely for personal gain.</em></p>
+<h1 id="-learning">🏫 Learning</h1>
+<p>// <em>This represents your genuine learning progress—the <strong>accumulation of knowledge</strong> that you truly love.</em></p>
+<h1 id="-relaxing">😊 Relaxing</h1>
+<p>// <em>Just relax a little. Jot down things that make you happy—moments of bliss, words you love, movies and books you adore—anything that doesn&rsquo;t require too much thinking, anything that brings you pure, simple joy.</em></p>
+<h1 id="-emotion">💗 Emotion</h1>
+<p>// <em>Keep track of your emotional shifts—no need for overly detailed descriptions; simply note whether you feel &ldquo;happy or sad.&rdquo;</em></p>
+<h1 id="-thinking">🧠 Thinking</h1>
+<p>//  <em>Recording some thoughts—jotting down various reflections and ideas.</em></p></div>
+                <summary class="read-more-btn" onclick="toggleReadMore('post-3')" style="display: inline;">阅读更多</summary>
+                
+            </div>
+            
+        </article>
+    
+    
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+    <script>
+    window.addEventListener('click', e => {
+        let dropboxs = document.getElementsByClassName("dropbox-content");
+        let dropbox_btns = document.getElementsByClassName("dropbox-btn");
+
+        if (dropbox_btns.namedItem(e.target.id) != null) return;
+
+        if(dropboxs.namedItem(e.target.id) == null) {
+            for (let i = 0; i < dropboxs.length; i++) {
+                dropboxs[i].removeAttribute("visible");
+            }
+        }
+    }, true)
+
+    function toggleReadMore(id) {
+        var post = document.getElementById(id)
+        var fullContent = post.getElementsByClassName("full-content")[0];
+        var btnText = post.getElementsByClassName("read-more-btn")[0];
+        var textContent = post.getElementsByClassName("text-content")[0];
+
+        if (fullContent.style.display === "none") {
+            textContent.style.display = "none";
+            fullContent.style.display = "inline";
+            btnText.innerHTML = "阅读更少";
+        } else {
+            textContent.style.display = "inline";
+            fullContent.style.display = "none";
+            btnText.innerHTML = "阅读更多";
+        }
+    }
+
+    function toggleDropbox(id) {
+        let dropbox = document.getElementById(id);
+
+        dropbox.toggleAttribute("visible");
+    }
+    </script>
+    </main>
+
+    
+</main>
+<footer style="text-align: center; padding: 1rem; margin-top: 2rem;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://icp.gov.moe/?keyword=20263642" target="_blank">萌ICP备20263642号</a>
+        <span style="color: var(--text-color);">|</span>
+        <a href="https://gohugo.io/" target="_blank">Powered by Hugo</a>
+        <span style="color: var(--text-color);">|</span>
+        <a href="https://github.com/salatine/neopost" target="_blank">Theme Pinghsu by Chakhsu</a>
+        <span style="color: var(--text-color);">|</span>
+        <span style="color: var(--text-color);">© 2021-2026 Smilewei Blog</span>
+    </div>
+</footer></body>
+</html>

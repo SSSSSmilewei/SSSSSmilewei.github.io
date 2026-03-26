@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS学习 on &gt;·圍笑就是山貓貓·&lt;</title>
+    <link>https://SSSSSmilewei.github.io/categories/cs%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in CS学习 on &gt;·圍笑就是山貓貓·&lt;</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 06 Dec 2025 17:43:45 +0800</lastBuildDate>
+    <atom:link href="https://SSSSSmilewei.github.io/categories/cs%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 常用指令与 Markdown 配置指南</title>
+      <link>https://SSSSSmilewei.github.io/posts/hugoreadme/</link>
+      <pubDate>Sat, 06 Dec 2025 17:43:45 +0800</pubDate>
+      <guid>https://SSSSSmilewei.github.io/posts/hugoreadme/</guid>
+      <description>详细介绍 Hugo 常用指令、Markdown Front Matter 配置、基本语法和实用技巧的完整指南</description>
+    </item>
+  </channel>
+</rss>

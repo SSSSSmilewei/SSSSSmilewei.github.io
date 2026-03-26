@@ -9,32 +9,18 @@
     <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://SSSSSmilewei.github.io/tags/important/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>联系方式</title>
-      <link>https://SSSSSmilewei.github.io/posts/_contact/</link>
-      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>https://SSSSSmilewei.github.io/posts/_contact/</guid>
-      <description>&lt;p&gt;以下是我的联系方式，无论是交友还是反馈问题，你都通过这些社交平台与我去到联系w。&lt;/p&gt;&#xA;&lt;p&gt;Jen estas miaj kontaktinformoj. Ĉu vi volas amikiĝi aŭ doni reagojn, vi povas kontakti min per ĉi tiuj sociaj amaskomunikiloj.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>我是谁 Kiu mi estas</title>
-      <link>https://SSSSSmilewei.github.io/posts/_introduction/</link>
+      <link>https://SSSSSmilewei.github.io/_introduction/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>https://SSSSSmilewei.github.io/posts/_introduction/</guid>
+      <guid>https://SSSSSmilewei.github.io/_introduction/</guid>
       <description>&lt;p&gt;你好呀！这里记录着关于我的一切（大概）。&lt;/p&gt;&#xA;&lt;hr&gt;</description>
     </item>
     <item>
       <title>用户: 围笑Smilewei</title>
-      <link>https://SSSSSmilewei.github.io/posts/_introduction_wiki/</link>
+      <link>https://SSSSSmilewei.github.io/_introduction_wiki/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>https://SSSSSmilewei.github.io/posts/_introduction_wiki/</guid>
+      <guid>https://SSSSSmilewei.github.io/_introduction_wiki/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>友链列表</title>
-      <link>https://SSSSSmilewei.github.io/posts/_friends/</link>
-      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>https://SSSSSmilewei.github.io/posts/_friends/</guid>
-      <description>&lt;p&gt;是浮莲子好朋友们！！&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
