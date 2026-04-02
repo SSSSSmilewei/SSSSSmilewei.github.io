@@ -91,15 +91,24 @@
     color: var(--border-color);
 }
 
+html, body {
+    cursor: url('/cursors/default.cur'), auto;
+}
+
+a, button {
+    cursor: url('/cursors/pointer.cur'), pointer;
+}
+
 body {
     background-color: var(--bg-color);
     background-image: var(--site-bg);
     margin: 0;
     font-size: 14px;
     color: var(--text-color);
+    letter-spacing: 0.5px;
 }
 
-p {line-height: 1.5em;}
+p {line-height: 1.4em;}
 
 div.tags {
     display: block;
@@ -123,6 +132,12 @@ h1 {
     filter: drop-shadow(2px 0 0 var(--outline-color)) drop-shadow(0 2px 0 var(--outline-color)) drop-shadow(-2px 0 0 var(--outline-color)) drop-shadow(0 -2px 0 var(--outline-color))drop-shadow(0 1px 1px var(--outline-color2)) drop-shadow(1px 0 1px var(--outline-color2));
 }
 
+h2 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
 h4,
 h5,
 h6 {color: var(--special-text-color);}
@@ -130,8 +145,8 @@ h6 {color: var(--special-text-color);}
 header {
     background-size: 100%;
     background-position: center;
-    min-height: 80px;
-    margin: 0 0;
+    min-height: 40px;
+    margin: 1em 0 0 0;
     align-content: center;
 }
 
@@ -212,7 +227,7 @@ li {
     margin-bottom: 5px;
 }
 
-nav {margin: 1em;}
+nav {margin: 0.5em;}
 
 nav.links > ul {
     max-width: 960px;
@@ -244,7 +259,7 @@ nav.links li > a:hover {
 }
 
 nav.languages {
-    margin: .3em;
+    margin: 0;
     text-align: center;
 }
 
@@ -261,6 +276,7 @@ a {
     color: var(--link-color);
     border-radius: .3em;
     transition: .2s ease-out;
+    text-decoration: none;
 }
 
 a:visited {
@@ -292,8 +308,9 @@ a:hover {
 }
 
 #avatar {
-    margin: .5em;
+    margin: .5em auto;
     max-width: 320px;
+    text-align: center;
 }
 
  
@@ -309,7 +326,8 @@ a:hover {
 }
 
 #bio {
-    margin: 20px;
+    width: 300px;
+    margin: 20px auto;
     padding: .2em;
     background: var(--bg-color);
     border: 4px double var(--bg-color2);
@@ -347,8 +365,13 @@ article {
     padding: 1em;
     border: 2px solid var(--border-color);
     border-radius: .3em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     box-shadow: var(--post-shadow-color) 5px 5px;
+}
+
+#full-content {
+    max-width: 92%;
+    margin: 0 auto;
 }
 article img {
     max-width: 100%;
@@ -398,6 +421,12 @@ header h1 a:hover {
     font-weight: bold;
     padding: .5rem 0;
     border-bottom: 4px double var(--outline-color);
+}
+
+.reading-info {
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-top: 0.3em;
 }
 
 .timestamp {
@@ -527,18 +556,19 @@ header h1 a:hover {
         flex-wrap: wrap;
     }
     #sidebar {
-        width: 100%;
+        width: calc(100% - 2em);
+        margin-left: 1em;
+        margin-right: 1em;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         border: none;
         border-radius: 0;
-        margin-right: 0;
         margin-bottom: 1em;
         border-radius: .3em;
     }
-    header {min-height: 110px;}
+    header {min-height: 80px;}
     header > h1 { 
         width: fit-content;
         padding: .3em 1em;
@@ -549,7 +579,7 @@ header h1 a:hover {
         flex-wrap: wrap;
         flex-direction: row;
     }
-    #bio {width: 50%;}
+    #bio {}
     
     #sidebar ul {
         line-height: 2em;
@@ -590,6 +620,33 @@ pre {
 
 #font-switch-btn, #tc-switch-btn {
     cursor: pointer;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    cursor: pointer;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.3em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+    transition: 0.2s ease-out;
+}
+
+#back-to-top:hover {
+    background-color: var(--select-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+#back-to-top svg {
+    display: block;
 }
 </style>
 
@@ -650,6 +707,23 @@ window.addEventListener('DOMContentLoaded', () => {
     applyFont();
     applyTrad();
 });
+
+
+window.onscroll = function() {
+    const btn = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -668,7 +742,7 @@ window.addEventListener('DOMContentLoaded', () => {
         
          
          
-         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">繁體中文</span></a></li>
+         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">簡繁轉換</span></a></li>
          
          <li><a href="javascript:void(0);" onclick="toggleFont()" id="font-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>字体转换</a></li>
         </ul>
@@ -806,6 +880,11 @@ window.addEventListener('DOMContentLoaded', () => {
             
             <div class="post-header">
                 @sa-berrrrr <span class="timestamp">2026/04/02</span>
+                <div class="reading-info">
+                    
+                    该文章大约 4600 字，预计 10 分钟内读完
+                    
+                </div>
             </div>
             <p>在 哔哩哔哩 刷到的很棒的文章，原作者并不活跃，但提出的观点和行笔风格非常棒，因而摘抄下来。</p>
             
@@ -838,12 +917,12 @@ window.addEventListener('DOMContentLoaded', () => {
 <p>但与结构主义有些古板的风格不同，这几位做这事时，同时给了世界一个恶作剧：这些学生组成了一个小团体（这很正常），但他们给自己的团体起了个<strong>人名</strong>，叫 <strong><a href="https://zh.wikipedia.org/wiki/%E5%B0%BC%E5%8F%A4%E6%8B%89%C2%B7%E5%B8%83%E5%B0%94%E5%B7%B4%E5%9F%BA">尼古拉·布尔巴基</a></strong>。</p>
 <p>他们用这个名字给<a href="https://zh.wikipedia.org/wiki/%E6%B3%95%E5%9B%BD%E6%95%B0%E5%AD%A6%E5%AD%A6%E4%BC%9A">法国数学学会</a>写信、发表成果。为了让布尔巴基更像个真人，他们把布尔巴基设定为<strong>不存在的</strong>、<strong>俄国传奇大数学家</strong>。接下来的时间里，这位&quot;伟大的布尔巴基&quot;<strong>本人</strong>宣布过自己女儿的结婚，公开调侃那些质疑他存在的人。当这个玩笑终于难以为继时，布尔巴基的<strong>讣告</strong>也如期在<strong>期刊</strong>上流传。</p>
 <blockquote>
-<p>我们今天颇显古板的教科书，它的创始人们却是时代和传统的叛逆者。这是历史给人们的一个恶作剧。</p>
+<p><em>我们今天颇显古板的教科书，它的创始人们却是时代和传统的叛逆者。这是历史给人们的一个恶作剧。</em></p>
 </blockquote>
 <p>这群布尔巴基派最后拿出了自己的成果——一本叫《<strong><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E5%8E%9F%E6%9C%AC">数学原本</a></strong>》的书。我对比了法文原标题，确信他们就是在&quot;碰瓷&quot;《<strong><a href="https://zh.wikipedia.org/wiki/%E5%87%A0%E4%BD%95%E5%8E%9F%E6%9C%AC">几何原本</a></strong>》：后者给**<a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E5%87%A0%E4%BD%95">古典几何</a><strong>确定了顶点，而前者想给</strong>整个数学**树立界碑。年轻人很气盛吧？</p>
 <p>两本《原本》的思想也是一脉相承。《几何原本》最<strong>强调</strong>基础，就是被后续叫做&quot;<strong><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E7%90%86%E5%8C%96%E7%B3%BB%E7%BB%9F">公理化</a></strong>&ldquo;的思考方法。</p>
 <blockquote>
-<p><strong><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E7%90%86%E5%8C%96%E7%B3%BB%E7%BB%9F">公理化</a></strong> 就是说：只需要最最简单的几个显而易见的概念（即 <strong><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E7%90%86">公理</a></strong>），就可以一层层推导出一个极其复杂、全面的庞然大物。</p>
+<p><strong><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E7%90%86%E5%8C%96%E7%B3%BB%E7%BB%9F">公理化</a></strong> <em>就是说：只需要最最简单的几个显而易见的概念（即 <strong><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E7%90%86">公理</a></strong>），就可以一层层推导出一个极其复杂、全面的庞然大物。</em></p>
 </blockquote>
 <p>很眼熟嘛？这就是<strong>结构主义</strong>的雏形。</p>
 <p><strong>而</strong>布尔巴基比起它又更近了一步：<strong>连那</strong>最最简单的几个显而易见的概念，都被加以<strong>严格的<a href="https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_%28%E6%95%B0%E5%AD%A6%29">抽象</a>定义</strong>，以便为他们的旷世杰作<strong>打下</strong>一个不可撼动的地基。</p>
@@ -858,7 +937,7 @@ window.addEventListener('DOMContentLoaded', () => {
 <p>因此，这座布尔巴基的数学水晶大厦，它没有真正的大门。&ldquo;灯塔&quot;的第一步变成了：学会怎么在垂直起伏的水晶墙上不打滑。</p>
 <p>也许布尔巴基的一名成员 <strong><a href="https://zh.wikipedia.org/wiki/%E4%BA%A8%E5%88%A9%C2%B7%E5%98%89%E5%BD%93">亨利·嘉当</a></strong> 的话，能让我们更明白他们的意图和缺陷（有点长，还请朋友们稍作忍耐，后面我会解释）：</p>
 <blockquote>
-<p>&ldquo;布尔巴基的著作，显然不是适合年轻学生的教科书。但对于一个熟悉最重要经典学科、并渴望深入的成熟的学生来说，通过学习布尔巴基的内容，他可以建立一个<strong>坚固</strong>而持久的基础。布尔巴基&rsquo;<strong>从一般到具体</strong>&lsquo;的方法，对初学者来说确实有些危险，因为他们的具体问题储备有限，可能会误认为&rsquo;一般性&rsquo;本身就是一个目标。但这并不是布尔巴基的意图。对于布尔巴基来说，只有在能够应用于更具体的问题时，一般概念才是有用的——实际上能节省时间和精力。&rdquo;</p>
+<p><em>&ldquo;布尔巴基的著作，显然不是适合年轻学生的教科书。但对于一个熟悉最重要经典学科、并渴望深入的成熟的学生来说，通过学习布尔巴基的内容，他可以建立一个<strong>坚固</strong>而持久的基础。布尔巴基&rsquo;<strong>从一般到具体</strong>&lsquo;的方法，对初学者来说确实有些危险，因为他们的具体问题储备有限，可能会误认为&rsquo;一般性&rsquo;本身就是一个目标。但这并不是布尔巴基的意图。对于布尔巴基来说，只有在能够应用于更具体的问题时，一般概念才是有用的——实际上能节省时间和精力。&rdquo;</em></p>
 <p>—— <em>Nicolas Bourbaki in Contemporary Mathematics</em></p>
 </blockquote>
 <p>意思就是：学习布尔巴基式的教材，有一个前提——就是需要脑子里已经有了各种<strong>例子</strong>，有了对<strong>具体</strong>足够的了解（哪怕是粗浅片面的）。有了这个前提的学生可以学得更<strong>系统</strong>；没有的学生不仅难以学习，而且容易误入歧途，以为那些<strong>抽象</strong>的概念就是学习的终点和全部，不能回到现实解决问题，也就成了所谓的&rdquo;<strong>书呆子</strong>&quot;，让&rdquo;<strong>高分低能</strong>&ldquo;的观念总是出现。</p>
@@ -940,6 +1019,11 @@ window.addEventListener('DOMContentLoaded', () => {
             
             <div class="post-header">
                 @Smilewei <span class="timestamp">2026/04/01</span>
+                <div class="reading-info">
+                    
+                    该文章大约 1700 字，预计 4 分钟内读完
+                    
+                </div>
             </div>
             <p>我很喜欢的歌——ずんだオーバーダンス的续作，高速钢琴和强烈的界隈风非常抓耳，很喜欢很喜欢。</p>
             
@@ -1065,6 +1149,11 @@ window.addEventListener('DOMContentLoaded', () => {
             
             <div class="post-header">
                 @Smilewei <span class="timestamp">2026/04/01</span>
+                <div class="reading-info">
+                    
+                    该文章大约 500 字，预计 1 分钟内读完
+                    
+                </div>
             </div>
             <p>事实上我并不是一位 <strong>Obsidian 发烧友</strong> ，但是 Obsidian 确实是我最喜欢的笔记软件，我一直是在使用一些基本功能，或许未来会学着深度使用（？）</p>
             
@@ -1112,6 +1201,11 @@ window.addEventListener('DOMContentLoaded', () => {
             
             <div class="post-header">
                 @Smilewei <span class="timestamp">2026/03/26</span>
+                <div class="reading-info">
+                    
+                    该文章大约 100 字，预计 1 分钟内读完
+                    
+                </div>
             </div>
             <p><p>还没读呢，以后慢慢写。</p>
 <p>包括一些其他小安比读物什么<strong>互助论</strong>什么<strong>面包与自由</strong>可能都会重新读读。</p>
@@ -1137,13 +1231,25 @@ window.addEventListener('DOMContentLoaded', () => {
             
             <div class="post-header">
                 @Smilewei <span class="timestamp">2026/03/26</span>
+                <div class="reading-info">
+                    
+                    该文章大约 500 字，预计 1 分钟内读完
+                    
+                </div>
             </div>
             <p><p>我发现一个不错的写东西的方法，就是使用问答的方式来记录自己的观点。</p>
 <p>长篇的论述性文章有两个问题：</p>
 <ul>
 <li>
-<p>第一是其实我想说的话也没有那么成体系，我自己也凑不出来一篇文章（，就算写出来其实也是乱糟糟的。</p>
-</li>
+<p>第一是其实我想说的话也没有那么成体系，我自己也凑不出来一篇文章（，就算写出来其实也是乱糟糟的。</p></p>
+            
+            <div class="post-content readmore">
+                
+                
+                <div class="text-content"></li>
+<li>
+<p>第二是读者朋友们也没有那么 …</p></li></div>
+                <div class="full-content" style="display: none;"></li>
 <li>
 <p>第二是读者朋友们也没有那么多时间和注意力听我瞎扯那么多</p>
 </li>
@@ -1168,13 +1274,7 @@ window.addEventListener('DOMContentLoaded', () => {
 <h2 id="你为什么使用-繁体中文-一词而非-正体中文">你为什么使用 “繁体中文” 一词，而非 “正体中文”？</h2>
 <h2 id="你如何看待-汉字简化运动-和-汉字拉丁化-">你如何看待 “汉字简化运动” 和 “汉字拉丁化” ？</h2>
 <h2 id="除了-普通话-你还会什么样的方言">除了 普通话 ，你还会什么样的方言？</h2>
-<h2 id="你如何看待普通话和方言的关系">你如何看待普通话和方言的关系？</h2></p>
-            
-            <div class="post-content readmore">
-                
-                
-                <div class="text-content"></div>
-                <div class="full-content" style="display: none;"></div>
+<h2 id="你如何看待普通话和方言的关系">你如何看待普通话和方言的关系？</h2></div>
                 <summary class="read-more-btn" onclick="toggleReadMore('post-4')" style="display: inline;">阅读更多</summary>
                 
             </div>
@@ -1253,5 +1353,9 @@ window.addEventListener('DOMContentLoaded', () => {
         <span style="color: var(--text-color);">|</span>
         <span style="color: var(--text-color);">© 2021-2026 Smilewei Blog</span>
     </div>
-</footer></body>
+</footer>
+<button id="back-to-top" onclick="scrollToTop()" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+</body>
 </html>

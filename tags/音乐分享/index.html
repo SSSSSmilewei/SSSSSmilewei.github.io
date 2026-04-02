@@ -90,15 +90,24 @@
     color: var(--border-color);
 }
 
+html, body {
+    cursor: url('/cursors/default.cur'), auto;
+}
+
+a, button {
+    cursor: url('/cursors/pointer.cur'), pointer;
+}
+
 body {
     background-color: var(--bg-color);
     background-image: var(--site-bg);
     margin: 0;
     font-size: 14px;
     color: var(--text-color);
+    letter-spacing: 0.5px;
 }
 
-p {line-height: 1.5em;}
+p {line-height: 1.4em;}
 
 div.tags {
     display: block;
@@ -122,6 +131,12 @@ h1 {
     filter: drop-shadow(2px 0 0 var(--outline-color)) drop-shadow(0 2px 0 var(--outline-color)) drop-shadow(-2px 0 0 var(--outline-color)) drop-shadow(0 -2px 0 var(--outline-color))drop-shadow(0 1px 1px var(--outline-color2)) drop-shadow(1px 0 1px var(--outline-color2));
 }
 
+h2 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
 h4,
 h5,
 h6 {color: var(--special-text-color);}
@@ -129,8 +144,8 @@ h6 {color: var(--special-text-color);}
 header {
     background-size: 100%;
     background-position: center;
-    min-height: 80px;
-    margin: 0 0;
+    min-height: 40px;
+    margin: 1em 0 0 0;
     align-content: center;
 }
 
@@ -211,7 +226,7 @@ li {
     margin-bottom: 5px;
 }
 
-nav {margin: 1em;}
+nav {margin: 0.5em;}
 
 nav.links > ul {
     max-width: 960px;
@@ -243,7 +258,7 @@ nav.links li > a:hover {
 }
 
 nav.languages {
-    margin: .3em;
+    margin: 0;
     text-align: center;
 }
 
@@ -260,6 +275,7 @@ a {
     color: var(--link-color);
     border-radius: .3em;
     transition: .2s ease-out;
+    text-decoration: none;
 }
 
 a:visited {
@@ -291,8 +307,9 @@ a:hover {
 }
 
 #avatar {
-    margin: .5em;
+    margin: .5em auto;
     max-width: 320px;
+    text-align: center;
 }
 
  
@@ -308,7 +325,8 @@ a:hover {
 }
 
 #bio {
-    margin: 20px;
+    width: 300px;
+    margin: 20px auto;
     padding: .2em;
     background: var(--bg-color);
     border: 4px double var(--bg-color2);
@@ -346,8 +364,13 @@ article {
     padding: 1em;
     border: 2px solid var(--border-color);
     border-radius: .3em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     box-shadow: var(--post-shadow-color) 5px 5px;
+}
+
+#full-content {
+    max-width: 92%;
+    margin: 0 auto;
 }
 article img {
     max-width: 100%;
@@ -397,6 +420,12 @@ header h1 a:hover {
     font-weight: bold;
     padding: .5rem 0;
     border-bottom: 4px double var(--outline-color);
+}
+
+.reading-info {
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-top: 0.3em;
 }
 
 .timestamp {
@@ -526,18 +555,19 @@ header h1 a:hover {
         flex-wrap: wrap;
     }
     #sidebar {
-        width: 100%;
+        width: calc(100% - 2em);
+        margin-left: 1em;
+        margin-right: 1em;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         border: none;
         border-radius: 0;
-        margin-right: 0;
         margin-bottom: 1em;
         border-radius: .3em;
     }
-    header {min-height: 110px;}
+    header {min-height: 80px;}
     header > h1 { 
         width: fit-content;
         padding: .3em 1em;
@@ -548,7 +578,7 @@ header h1 a:hover {
         flex-wrap: wrap;
         flex-direction: row;
     }
-    #bio {width: 50%;}
+    #bio {}
     
     #sidebar ul {
         line-height: 2em;
@@ -589,6 +619,33 @@ pre {
 
 #font-switch-btn, #tc-switch-btn {
     cursor: pointer;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    cursor: pointer;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.3em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+    transition: 0.2s ease-out;
+}
+
+#back-to-top:hover {
+    background-color: var(--select-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+#back-to-top svg {
+    display: block;
 }
 </style>
 
@@ -649,6 +706,23 @@ window.addEventListener('DOMContentLoaded', () => {
     applyFont();
     applyTrad();
 });
+
+
+window.onscroll = function() {
+    const btn = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -661,7 +735,7 @@ window.addEventListener('DOMContentLoaded', () => {
         <ul>
         
          
-         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">繁體中文</span></a></li>
+         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">簡繁轉換</span></a></li>
          
          <li><a href="javascript:void(0);" onclick="toggleFont()" id="font-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>字体转换</a></li>
         </ul>
@@ -719,5 +793,9 @@ Vocal：重音テト (Synthesizer V )
         <span style="color: var(--text-color);">|</span>
         <span style="color: var(--text-color);">© 2021-2026 Smilewei Blog</span>
     </div>
-</footer></body>
+</footer>
+<button id="back-to-top" onclick="scrollToTop()" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+</body>
 </html>

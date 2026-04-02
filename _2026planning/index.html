@@ -14,52 +14,7 @@
 
 打这个比赛的主要目的是为了给学校的大创中心拿一些面子奖，毕竟在那里得了很多好处，需要回报一下老师。
 
-[ - ] 全国大学生C语言程序设计大赛
-
-原因同上。
-
-[ ✅ ] 获得一份不错的工作
-
-一份上海六年级小孩的家教工作，以后会专门写篇文章讲一讲，赚了一些钱。
-
-[ - ] 2026 春夏季开源操作系统训练营
-
-铁人三项的第一部分，这个是真正意义上的知识积累，能学到很多东西。
-
-[ - ] QEMU 训练营 2026
-
-铁人三项的第二部分
-
-[ - ] 一生一芯
-
-铁人三项的第三部分
-
-[ - ] 全国大学英语四级考试 600分以上
-
-感觉话说的有点大了，但是不管怎么样考高一点的话可以英语免修，会省好多时间精力。
-
-[ - ] 去一次日本
-
-上次娅娅去日本旅游，治疗精神疾病的效果太好了，今年最好再去一次。
-
-[ - ] 学完CS61ABC
-
-科班计科学习的白月光了。
-
-[ ? ] 参加一次夏季开源活动
-
-GSoC无果后想要试着加入，但目前限于技术和信息差还不清楚怎么弄。
-
-[ ? ] plct工作机会
-
-泠喵喵给的信息差，也是限于能力不足。
-
-[ ? ] 日本语能力测试 N2水平认证
-
-年年日本语年年50音（
-
-购物清单
-[ - ] Macbook Pro M1 Pro 16&#39;&#39;">
+[ - ] 全国大学生C语言程序设计大赛">
     
     
     <meta name="keywords" content="important">
@@ -143,15 +98,24 @@ GSoC无果后想要试着加入，但目前限于技术和信息差还不清楚�
     color: var(--border-color);
 }
 
+html, body {
+    cursor: url('/cursors/default.cur'), auto;
+}
+
+a, button {
+    cursor: url('/cursors/pointer.cur'), pointer;
+}
+
 body {
     background-color: var(--bg-color);
     background-image: var(--site-bg);
     margin: 0;
     font-size: 14px;
     color: var(--text-color);
+    letter-spacing: 0.5px;
 }
 
-p {line-height: 1.5em;}
+p {line-height: 1.4em;}
 
 div.tags {
     display: block;
@@ -175,6 +139,12 @@ h1 {
     filter: drop-shadow(2px 0 0 var(--outline-color)) drop-shadow(0 2px 0 var(--outline-color)) drop-shadow(-2px 0 0 var(--outline-color)) drop-shadow(0 -2px 0 var(--outline-color))drop-shadow(0 1px 1px var(--outline-color2)) drop-shadow(1px 0 1px var(--outline-color2));
 }
 
+h2 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
 h4,
 h5,
 h6 {color: var(--special-text-color);}
@@ -182,8 +152,8 @@ h6 {color: var(--special-text-color);}
 header {
     background-size: 100%;
     background-position: center;
-    min-height: 80px;
-    margin: 0 0;
+    min-height: 40px;
+    margin: 1em 0 0 0;
     align-content: center;
 }
 
@@ -264,7 +234,7 @@ li {
     margin-bottom: 5px;
 }
 
-nav {margin: 1em;}
+nav {margin: 0.5em;}
 
 nav.links > ul {
     max-width: 960px;
@@ -296,7 +266,7 @@ nav.links li > a:hover {
 }
 
 nav.languages {
-    margin: .3em;
+    margin: 0;
     text-align: center;
 }
 
@@ -313,6 +283,7 @@ a {
     color: var(--link-color);
     border-radius: .3em;
     transition: .2s ease-out;
+    text-decoration: none;
 }
 
 a:visited {
@@ -344,8 +315,9 @@ a:hover {
 }
 
 #avatar {
-    margin: .5em;
+    margin: .5em auto;
     max-width: 320px;
+    text-align: center;
 }
 
  
@@ -361,7 +333,8 @@ a:hover {
 }
 
 #bio {
-    margin: 20px;
+    width: 300px;
+    margin: 20px auto;
     padding: .2em;
     background: var(--bg-color);
     border: 4px double var(--bg-color2);
@@ -399,8 +372,13 @@ article {
     padding: 1em;
     border: 2px solid var(--border-color);
     border-radius: .3em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     box-shadow: var(--post-shadow-color) 5px 5px;
+}
+
+#full-content {
+    max-width: 92%;
+    margin: 0 auto;
 }
 article img {
     max-width: 100%;
@@ -450,6 +428,12 @@ header h1 a:hover {
     font-weight: bold;
     padding: .5rem 0;
     border-bottom: 4px double var(--outline-color);
+}
+
+.reading-info {
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-top: 0.3em;
 }
 
 .timestamp {
@@ -579,18 +563,19 @@ header h1 a:hover {
         flex-wrap: wrap;
     }
     #sidebar {
-        width: 100%;
+        width: calc(100% - 2em);
+        margin-left: 1em;
+        margin-right: 1em;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         border: none;
         border-radius: 0;
-        margin-right: 0;
         margin-bottom: 1em;
         border-radius: .3em;
     }
-    header {min-height: 110px;}
+    header {min-height: 80px;}
     header > h1 { 
         width: fit-content;
         padding: .3em 1em;
@@ -601,7 +586,7 @@ header h1 a:hover {
         flex-wrap: wrap;
         flex-direction: row;
     }
-    #bio {width: 50%;}
+    #bio {}
     
     #sidebar ul {
         line-height: 2em;
@@ -642,6 +627,33 @@ pre {
 
 #font-switch-btn, #tc-switch-btn {
     cursor: pointer;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    cursor: pointer;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.3em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+    transition: 0.2s ease-out;
+}
+
+#back-to-top:hover {
+    background-color: var(--select-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+#back-to-top svg {
+    display: block;
 }
 </style>
 
@@ -702,6 +714,23 @@ window.addEventListener('DOMContentLoaded', () => {
     applyFont();
     applyTrad();
 });
+
+
+window.onscroll = function() {
+    const btn = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -714,7 +743,7 @@ window.addEventListener('DOMContentLoaded', () => {
         <ul>
         
          
-         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">繁體中文</span></a></li>
+         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">簡繁轉換</span></a></li>
          
          <li><a href="javascript:void(0);" onclick="toggleFont()" id="font-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>字体转换</a></li>
         </ul>
@@ -732,6 +761,11 @@ window.addEventListener('DOMContentLoaded', () => {
         
         <div class="post-header">
         @Smilewei <span class="timestamp">2026/04/01</span>
+        <div class="reading-info">
+            
+            该文章大约 600 字，预计 2 分钟内读完
+            
+        </div>
         </div>
         <p><hr>
 <h2 id="2026任务栏">2026任务栏</h2>
@@ -739,8 +773,9 @@ window.addEventListener('DOMContentLoaded', () => {
 <ul>
 <li>打这个比赛的主要目的是为了给学校的<strong>大创中心</strong>拿一些面子奖，毕竟在那里得了很多好处，需要回报一下老师。</li>
 </ul>
-<p>[ - ] 全国大学生<strong>C语言</strong>程序设计大赛</p>
-<ul>
+<p>[ - ] 全国大学生<strong>C语言</strong>程序设计大赛</p></p>
+        
+        <div class="auto-numbering" id="full-content"><ul>
 <li>原因同上。</li>
 </ul>
 <p>[ ✅ ] 获得一份不错的工作</p>
@@ -784,9 +819,8 @@ window.addEventListener('DOMContentLoaded', () => {
 <li>年年日本语年年50音（</li>
 </ul>
 <h2 id="购物清单">购物清单</h2>
-<p>[ - ] Macbook Pro M1 Pro 16''</p></p>
-        
-        <div class="auto-numbering" id="full-content"><p>[ - ] Nintendo Switch 2</p>
+<p>[ - ] Macbook Pro M1 Pro 16''</p>
+<p>[ - ] Nintendo Switch 2</p>
 <p>[ ? ] 给娅老师换个电视</p>
 <p>[ ? ] 海鸥4A</p>
 <ul>
@@ -828,5 +862,9 @@ window.addEventListener('DOMContentLoaded', () => {
         <span style="color: var(--text-color);">|</span>
         <span style="color: var(--text-color);">© 2021-2026 Smilewei Blog</span>
     </div>
-</footer></body>
+</footer>
+<button id="back-to-top" onclick="scrollToTop()" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+</body>
 </html>
