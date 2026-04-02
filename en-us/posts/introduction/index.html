@@ -37,6 +37,11 @@
     --outline-color2: #CEEAFF;
     --list-style-type: "";
     --list-style-image: url("/flower.png");
+    --body-font: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root.font-harmony {
+    --body-font: 'HarmonyOS_Sans_SC', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @font-face {
@@ -46,9 +51,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'HarmonyOS_Sans_SC';
+    src: url('/Fonts/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--body-font);
 }
 
 @-moz-document url-prefix() {
@@ -176,6 +188,7 @@ li.page-item a{
     text-decoration: none;
     user-select: none;
 }
+
 
 li.page-item.active a{
     color: var(--accent-color);
@@ -574,7 +587,70 @@ pre {
 .userbox-id { min-width:64px; padding:8px 10px; font-weight:bold; text-align:center; border-right:2px solid var(--outline-color); }
 .userbox-body { display:flex; align-items:center; gap:8px; padding:8px 10px; }
 .userbox-icon { width:24px; height:24px; object-fit:contain; }
+
+#font-switch-btn, #tc-switch-btn {
+    cursor: pointer;
+}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.js"></script>
+<script>
+
+async function applyTrad() {
+    const isTrad = localStorage.getItem('is-trad') === 'true';
+    const tcText = document.getElementById('tc-text');
+    if (isTrad) {
+        const converter = OpenCC.Converter({ from: 'cn', to: 'tw' });
+        
+        const walk = (node) => {
+            if (node.nodeType === 3) {
+                node.data = converter(node.data);
+            } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+                for (let child of node.childNodes) walk(child);
+            }
+        };
+        walk(document.body);
+        if (tcText) tcText.innerText = '已轉換為正體中文';
+    }
+}
+
+function toggleTrad() {
+    const isTrad = localStorage.getItem('is-trad') === 'true';
+    if (isTrad) {
+        localStorage.setItem('is-trad', 'false');
+    } else {
+        localStorage.setItem('is-trad', 'true');
+    }
+    location.reload(); 
+}
+
+
+function applyFont() {
+    const isHarmony = localStorage.getItem('font-harmony') === 'true';
+    if (isHarmony) {
+        document.documentElement.classList.add('font-harmony');
+    } else {
+        document.documentElement.classList.remove('font-harmony');
+    }
+}
+
+function toggleFont() {
+    const isHarmony = document.documentElement.classList.contains('font-harmony');
+    if (isHarmony) {
+        document.documentElement.classList.remove('font-harmony');
+        localStorage.setItem('font-harmony', 'false');
+    } else {
+        document.documentElement.classList.add('font-harmony');
+        localStorage.setItem('font-harmony', 'true');
+    }
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    applyFont();
+    applyTrad();
+});
+</script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
@@ -582,6 +658,13 @@ pre {
 </head>
 <body>
         <header><h1 id="&gt;·Smilewei is Shanmeow·&lt;"><a href="https://SSSSSmilewei.github.io/en-us/">&gt;·Smilewei is Shanmeow·&lt;</a></h1></header>
+    <nav class="languages links">
+        <ul>
+        
+         
+         <li><a href="javascript:void(0);" onclick="toggleFont()" id="font-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>Fonts Change</a></li>
+        </ul>
+    </nav>
 <main>
     
 <div id="single-post">

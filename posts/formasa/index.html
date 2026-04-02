@@ -38,6 +38,11 @@
     --outline-color2: #CEEAFF;
     --list-style-type: "";
     --list-style-image: url("/flower.png");
+    --body-font: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root.font-harmony {
+    --body-font: 'HarmonyOS_Sans_SC', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @font-face {
@@ -47,9 +52,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'HarmonyOS_Sans_SC';
+    src: url('/Fonts/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--body-font);
 }
 
 @-moz-document url-prefix() {
@@ -177,6 +189,7 @@ li.page-item a{
     text-decoration: none;
     user-select: none;
 }
+
 
 li.page-item.active a{
     color: var(--accent-color);
@@ -575,7 +588,70 @@ pre {
 .userbox-id { min-width:64px; padding:8px 10px; font-weight:bold; text-align:center; border-right:2px solid var(--outline-color); }
 .userbox-body { display:flex; align-items:center; gap:8px; padding:8px 10px; }
 .userbox-icon { width:24px; height:24px; object-fit:contain; }
+
+#font-switch-btn, #tc-switch-btn {
+    cursor: pointer;
+}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.js"></script>
+<script>
+
+async function applyTrad() {
+    const isTrad = localStorage.getItem('is-trad') === 'true';
+    const tcText = document.getElementById('tc-text');
+    if (isTrad) {
+        const converter = OpenCC.Converter({ from: 'cn', to: 'tw' });
+        
+        const walk = (node) => {
+            if (node.nodeType === 3) {
+                node.data = converter(node.data);
+            } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+                for (let child of node.childNodes) walk(child);
+            }
+        };
+        walk(document.body);
+        if (tcText) tcText.innerText = '已轉換為正體中文';
+    }
+}
+
+function toggleTrad() {
+    const isTrad = localStorage.getItem('is-trad') === 'true';
+    if (isTrad) {
+        localStorage.setItem('is-trad', 'false');
+    } else {
+        localStorage.setItem('is-trad', 'true');
+    }
+    location.reload(); 
+}
+
+
+function applyFont() {
+    const isHarmony = localStorage.getItem('font-harmony') === 'true';
+    if (isHarmony) {
+        document.documentElement.classList.add('font-harmony');
+    } else {
+        document.documentElement.classList.remove('font-harmony');
+    }
+}
+
+function toggleFont() {
+    const isHarmony = document.documentElement.classList.contains('font-harmony');
+    if (isHarmony) {
+        document.documentElement.classList.remove('font-harmony');
+        localStorage.setItem('font-harmony', 'false');
+    } else {
+        document.documentElement.classList.add('font-harmony');
+        localStorage.setItem('font-harmony', 'true');
+    }
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    applyFont();
+    applyTrad();
+});
+</script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
@@ -583,6 +659,15 @@ pre {
 </head>
 <body>
         <header><h1 id="&gt;·圍笑就是山貓貓·&lt;"><a href="https://SSSSSmilewei.github.io/">&gt;·圍笑就是山貓貓·&lt;</a></h1></header>
+    <nav class="languages links">
+        <ul>
+        
+         
+         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">繁體中文</span></a></li>
+         
+         <li><a href="javascript:void(0);" onclick="toggleFont()" id="font-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>字体转换</a></li>
+        </ul>
+    </nav>
 <main>
     
 <div id="single-post">
@@ -599,10 +684,10 @@ pre {
         </div>
         <p>筆者初識 楊祖珺 源自對其的採訪和她對當今民進黨政府的批評，藉此機會去了解了台灣自由化運動的歷史發展，並發現了這部機具台灣本土風情的音樂作品。</p>
         
-        <div class="auto-numbering" id="full-content"><h2 id="音樂鏈接">音樂鏈接</h2>
+        <div class="auto-numbering" id="full-content"><p><img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/b8/24/6b/b8246b23-30a7-f0b3-cdf6-4a08897be841/Job9cf8a0e8-6799-42cd-a5ec-0bf2bacb9c26-182104171-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_356204561_1997443356-Time1734674478879.png/592x592bb.webp" alt="专辑封面"></p>
+<h2 id="音樂鏈接">音樂鏈接</h2>
 <p><a href="https://www.youtube.com/watch?v=4UvWeuzhxHw">Youtube</a>      <a href="https://www.bilibili.com/video/BV15J411u7rg">哔哩哔哩</a>      <a href="https://music.apple.com/library/albums/l.CNfJ4Rc">Apple Music</a>     <a href="https://music.163.com/#/album?id=31472">网易云音乐</a></p>
 <h2 id="音樂信息">音樂信息</h2>
-<p><img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/b8/24/6b/b8246b23-30a7-f0b3-cdf6-4a08897be841/Job9cf8a0e8-6799-42cd-a5ec-0bf2bacb9c26-182104171-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_356204561_1997443356-Time1734674478879.png/592x592bb.webp" alt="专辑封面"></p>
 <p>《美麗島》是一首台灣經典民謠歌曲，誕生於1977年，由李雙澤創作，歌詞來自淡江大學老師梁景峰改寫台灣女詩人陳秀喜的詩作《台灣》。該曲被楊祖珺收錄在其1979年發行的專輯《楊祖珺》之中，隨後被行政院新聞局列為禁歌。羅大佑等人曾翻唱，被收錄於胡德夫專輯《匆匆》（2005年）、楊祖珺專輯《關不住的歌》（2008年）等。歌中的「水牛、稻米、香蕉、玉蘭花」，載負著幾代人對這片土地的複雜情感，其姊妹曲為《少年中國》。</p>
 <p><em>「剛開始我是唱一些大家都知道的歌，像《美麗島》或《少年中國》，很熱鬧。後來不知道什麼時候開始，我就很即興地亂唱，完全是唱出自己心裡的感受。他們聽了，突然就跳起來，說：『這就是詩啦！』」</em></p>
 <p>楊祖珺， 美國麻州大學傳播研究所哲學博士。臺灣1970年代「唱自己的歌」（校園民歌）重要推手，1977年台灣電視公司黃金時段音樂節目《跳躍的音符》主持人，1978年為救援雛妓舉辦台灣第一場戶外慈善演唱會「青草地演唱會」，1979年任《春風雜誌》社務委員。</p>

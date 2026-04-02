@@ -37,6 +37,11 @@
     --outline-color2: #CEEAFF;
     --list-style-type: "";
     --list-style-image: url("/flower.png");
+    --body-font: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root.font-harmony {
+    --body-font: 'HarmonyOS_Sans_SC', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @font-face {
@@ -46,9 +51,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'HarmonyOS_Sans_SC';
+    src: url('/Fonts/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--body-font);
 }
 
 @-moz-document url-prefix() {
@@ -176,6 +188,7 @@ li.page-item a{
     text-decoration: none;
     user-select: none;
 }
+
 
 li.page-item.active a{
     color: var(--accent-color);
@@ -574,7 +587,70 @@ pre {
 .userbox-id { min-width:64px; padding:8px 10px; font-weight:bold; text-align:center; border-right:2px solid var(--outline-color); }
 .userbox-body { display:flex; align-items:center; gap:8px; padding:8px 10px; }
 .userbox-icon { width:24px; height:24px; object-fit:contain; }
+
+#font-switch-btn, #tc-switch-btn {
+    cursor: pointer;
+}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.js"></script>
+<script>
+
+async function applyTrad() {
+    const isTrad = localStorage.getItem('is-trad') === 'true';
+    const tcText = document.getElementById('tc-text');
+    if (isTrad) {
+        const converter = OpenCC.Converter({ from: 'cn', to: 'tw' });
+        
+        const walk = (node) => {
+            if (node.nodeType === 3) {
+                node.data = converter(node.data);
+            } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+                for (let child of node.childNodes) walk(child);
+            }
+        };
+        walk(document.body);
+        if (tcText) tcText.innerText = '已轉換為正體中文';
+    }
+}
+
+function toggleTrad() {
+    const isTrad = localStorage.getItem('is-trad') === 'true';
+    if (isTrad) {
+        localStorage.setItem('is-trad', 'false');
+    } else {
+        localStorage.setItem('is-trad', 'true');
+    }
+    location.reload(); 
+}
+
+
+function applyFont() {
+    const isHarmony = localStorage.getItem('font-harmony') === 'true';
+    if (isHarmony) {
+        document.documentElement.classList.add('font-harmony');
+    } else {
+        document.documentElement.classList.remove('font-harmony');
+    }
+}
+
+function toggleFont() {
+    const isHarmony = document.documentElement.classList.contains('font-harmony');
+    if (isHarmony) {
+        document.documentElement.classList.remove('font-harmony');
+        localStorage.setItem('font-harmony', 'false');
+    } else {
+        document.documentElement.classList.add('font-harmony');
+        localStorage.setItem('font-harmony', 'true');
+    }
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    applyFont();
+    applyTrad();
+});
+</script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
@@ -582,18 +658,22 @@ pre {
 </head>
 <body>
         <header><h1 id="&gt;·圍笑就是山貓貓·&lt;"><a href="https://SSSSSmilewei.github.io/">&gt;·圍笑就是山貓貓·&lt;</a></h1></header>
-<main>
-    
-    
     <nav class="languages links">
         <ul>
+        
         
         <li>
             <a href="/en-us/">English</a>
         </li>
         
+         
+         
+         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">繁體中文</span></a></li>
+         
+         <li><a href="javascript:void(0);" onclick="toggleFont()" id="font-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>字体转换</a></li>
         </ul>
     </nav>
+<main>
     
     <div id="content">
     <aside id="sidebar">
@@ -662,20 +742,20 @@ pre {
                 <img src="/images/bio.png">
             </div>
             <div>
-            <h1>Saluton👋! Mi estas Smilewei!</h1>
+            <h1>Saluton. 👋  Mi  estas  Smilewei !</h1>
             
-                <p>\ 你好呀，叫我围笑或者山猫猫就好！</p>
+                <p>你好呀，叫我围笑或者山猫猫就好！</p>
             
-                <p>\ Saluton, mi estas Smilewei!</p>
+                <p>Saluton, mi estas Smilewei!</p>
             
-                <p>\ 这里是一个已愈精神病人的乐园，喜欢您来，也感谢您来到这里。</p>
+                <p>这里是一个已愈精神病人的乐园，喜欢您来，也感谢您来到这里。</p>
             
-                <p>\ Ĉi tio estas paradizo por resaniĝintaj mensmalsanuloj. Ni bonvenigas vin kaj dankas vin pro via vizito.</p>
+                <p>Ĉi tio estas paradizo por resaniĝintaj mensmalsanuloj. Ni bonvenigas vin kaj dankas vin pro via vizito.</p>
             
             </div>
             </article>
             <article>
-            <h4>你可以在这里看到：</h4>
+            <h4>祂还在这里歌唱着：</h4>
                 <ul>
                 
                     <li>あしたの ことは しっている</li>
@@ -771,13 +851,14 @@ pre {
                 
                 
                 <div class="text-content"><hr>
+<p><img src="https://pbs.twimg.com/media/HEUfOVrbYAAbBQU?format=jpg&amp;name=4096x4096" alt=""></p>
 <h2 id="音乐链接">音乐链接</h2>
 <p><a href="https://www.youtube.com/watch?v=lBIPEEaSovg">Youtube …</a></p></div>
                 <div class="full-content" style="display: none;"><hr>
+<p><img src="https://pbs.twimg.com/media/HEUfOVrbYAAbBQU?format=jpg&amp;name=4096x4096" alt=""></p>
 <h2 id="音乐链接">音乐链接</h2>
 <p><a href="https://www.youtube.com/watch?v=lBIPEEaSovg">Youtube</a>  <a href="www.bilibili.com/video/BV16GeQexEkY/">哔哩哔哩</a></p>
 <h2 id="音乐信息">音乐信息</h2>
-<p><img src="https://pbs.twimg.com/media/HEUfOVrbYAAbBQU?format=jpg&amp;name=4096x4096" alt=""></p>
 <p>Artist: d0tc0mmie</p>
 <p>Original music：椎名もた（ぽわぽわP）</p>
 <p>Vocal：重音テト (Synthesizer V )</p>
@@ -888,12 +969,13 @@ pre {
             <div class="post-content readmore">
                 
                 
-                <div class="text-content"><h2 id="音樂鏈接">音樂鏈接</h2>
+                <div class="text-content"><p><img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/b8/24/6b/b8246b23-30a7-f0b3-cdf6-4a08897be841/Job9cf8a0e8-6799-42cd-a5ec-0bf2bacb9c26-182104171-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_356204561_1997443356-Time1734674478879.png/592x592bb.webp" alt="专辑封面"></p>
+<h2 id="音樂鏈接">音樂鏈接</h2>
 <p><a href="https://www.youtube.com/watch?v=4UvWeuzhxHw">Youtube …</a></p></div>
-                <div class="full-content" style="display: none;"><h2 id="音樂鏈接">音樂鏈接</h2>
+                <div class="full-content" style="display: none;"><p><img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/b8/24/6b/b8246b23-30a7-f0b3-cdf6-4a08897be841/Job9cf8a0e8-6799-42cd-a5ec-0bf2bacb9c26-182104171-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_356204561_1997443356-Time1734674478879.png/592x592bb.webp" alt="专辑封面"></p>
+<h2 id="音樂鏈接">音樂鏈接</h2>
 <p><a href="https://www.youtube.com/watch?v=4UvWeuzhxHw">Youtube</a>      <a href="https://www.bilibili.com/video/BV15J411u7rg">哔哩哔哩</a>      <a href="https://music.apple.com/library/albums/l.CNfJ4Rc">Apple Music</a>     <a href="https://music.163.com/#/album?id=31472">网易云音乐</a></p>
 <h2 id="音樂信息">音樂信息</h2>
-<p><img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/b8/24/6b/b8246b23-30a7-f0b3-cdf6-4a08897be841/Job9cf8a0e8-6799-42cd-a5ec-0bf2bacb9c26-182104171-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_356204561_1997443356-Time1734674478879.png/592x592bb.webp" alt="专辑封面"></p>
 <p>《美麗島》是一首台灣經典民謠歌曲，誕生於1977年，由李雙澤創作，歌詞來自淡江大學老師梁景峰改寫台灣女詩人陳秀喜的詩作《台灣》。該曲被楊祖珺收錄在其1979年發行的專輯《楊祖珺》之中，隨後被行政院新聞局列為禁歌。羅大佑等人曾翻唱，被收錄於胡德夫專輯《匆匆》（2005年）、楊祖珺專輯《關不住的歌》（2008年）等。歌中的「水牛、稻米、香蕉、玉蘭花」，載負著幾代人對這片土地的複雜情感，其姊妹曲為《少年中國》。</p>
 <p><em>「剛開始我是唱一些大家都知道的歌，像《美麗島》或《少年中國》，很熱鬧。後來不知道什麼時候開始，我就很即興地亂唱，完全是唱出自己心裡的感受。他們聽了，突然就跳起來，說：『這就是詩啦！』」</em></p>
 <p>楊祖珺， 美國麻州大學傳播研究所哲學博士。臺灣1970年代「唱自己的歌」（校園民歌）重要推手，1977年台灣電視公司黃金時段音樂節目《跳躍的音符》主持人，1978年為救援雛妓舉辦台灣第一場戶外慈善演唱會「青草地演唱會」，1979年任《春風雜誌》社務委員。</p>
@@ -996,34 +1078,36 @@ pre {
             <div class="post-header">
                 @Smilewei <span class="timestamp">2026/03/09</span>
             </div>
-            <p><p>我想写一篇长文。</p>
-<p>收拾好了桌面，就在实验室里对着电脑做了一整天。试着乱调了一下UTAU，研究了一下本地跑了个大模型，又把自己的iPod刷了还算一个满意的主题。一天下来几乎没怎么看手机，很喜欢这种专注的感觉。</p></p>
+            <p><hr>
+<p>我想写一篇<strong>长文</strong>。</p>
+<p>收拾好了桌面，就在<strong>实验室</strong>里对着电脑做了一整天。试着乱调了一下<strong>UTAU</strong>，研究了一下本地跑了个<strong>大模型</strong>，又把自己的<strong>iPod</strong>刷了还算一个满意的主题。一天下来几乎没怎么看手机，很喜欢这种<strong>专注</strong>的感觉。</p>
+<p>我真的很想要去<strong>专注</strong>的多做一些事情，但是几乎每件事情都是做了个差不多就没再去碰，我也不知道到底要研究到什么地步才叫做“<strong>掌握了这项技能</strong>”，就只好每天多做一些事情吧。我确实应该做一些更科学的<strong>时间管理</strong>和<strong>任务规划</strong>，但是研究这个管理也丢进了我的<strong>TO DO LIST</strong>。</p>
+<p>入职了<strong>滨寿司</strong>，其实一小时<strong>22元</strong>的时薪很好了，<strong>刷盘子</strong>的工作还是比较累的。但是我这段时间确实有些<strong>缺钱</strong>，再加上<strong>工作环境</strong>很愉快，就当<strong>锻炼</strong>锻炼身体了，我还年轻嘛！</p>
+<p>我是<strong>天蝎座</strong>，初中的时候和同学聊天，总是会说天蝎座是很<strong>记仇</strong>的人。我不知一次思考过，我是不是记仇的人呢？我其实还蛮记仇的，如果让我伤心难过了，我会一直记在心里然后开始幻想在未来的哪一天狠狠的<strong>超越</strong>那些欺负我的人。但亦或是自己终究<strong>麻木</strong>了，亦或是自己<strong>能力</strong>确实没那么强，到了若干年之后，这股气最终转换成了“<strong>曾经的坏想法</strong>”罢了。</p>
+<p>但是人总是好难好难<strong>满足</strong>的。初中的时候我想<strong>逃离</strong>枣庄，逃离家里人——那时候的我幻想着，有什么<strong>女仆店</strong>，我逃到了哪里，一边<strong>打工</strong>，一边<strong>上学</strong>，最终过上了想要的<strong>生活</strong>；我还幻想着，幻想着能被有钱的<strong>吸血鬼姐姐</strong>带到无忧无虑可以自己生活的<strong>公寓</strong>，幻想着能造出来一个和我一模一样的<strong>机器人</strong>代替我上学、工作、结婚生子——这样我就能在妈妈不伤心的情况下<strong>自由</strong>地活着了。我曾经真的很喜欢<strong>幻想</strong>，或许这是我曾经的<strong>灵性</strong>所在。现在不怎么幻想了，因为我要守护另一个<strong>爱幻想的小猫</strong>的梦，可是也越来越觉得自己变得<strong>麻木</strong>、变得<strong>理所当然</strong>、变得没那么<strong>细腻</strong>了。</p>
+<p>我<strong>习惯</strong>了太多事情，</p>
+<p>我习惯了<strong>性少数</strong>在这边土地下是<strong>见不得人</strong>的、</p>
+<p>我习惯了<strong>不公平</strong>的<strong>社会资源分配</strong>环境、</p>
+<p>我习惯了<strong>男性网民</strong>在互联网上的<strong>第一性发言</strong>、</p>
+<p>我习惯了对一切<strong>政治意识形态</strong>的<strong>解构娱乐</strong>、</p>
+<p>我习惯了<strong>无源头</strong>的<strong>恶意</strong>和<strong>偏见</strong>、</p>
+<p>我习惯了<strong>战争</strong>和<strong>互联网战争</strong>。</p>
+<p>可我也慢慢不知道<strong>我是谁</strong>，我应该如何，我们应该如何了。其实人也并非不能<strong>麻木</strong>地或者，但总觉得，不对，不应该，我不应该就这么<strong>忍受</strong>下去。</p>
+<p>我很害怕我成为<strong>无聊的大人</strong>，所以我一直在守护着自己所有的<strong>惊奇</strong>。我小心翼翼地保护着自己每一份<strong>新鲜体验</strong>，</p>
+<p>我还会因为去<strong>麦当劳</strong>用<strong>点餐机</strong>点餐而感到<strong>幸福</strong>、</p>
+<p>我还会因为坐<strong>地铁</strong>随着列车的<strong>加速度</strong>而感到<strong>幸福</strong>、</p>
+<p>我还会因为学校<strong>发新书</strong>撕开塑封阅读目录而感到<strong>幸福</strong>、</p>
+<p>我还会因为在<strong>机厅</strong>出勤切实地帮助到了<strong>新玩家</strong>而感受到<strong>幸福</strong>、</p>
+<p>最重要的是，我已经<strong>离开束缚的环境</strong>，我实现了过去自己想要的<strong>生活</strong>，我可以做很多事情，我真的很<strong>幸福</strong>。</p>
+<p>我其实没什么<strong>勇气</strong>去拥抱<strong>过去的自己</strong>的，因为我现在的生活也还是一团乱麻。但我的确没<strong>辜负</strong>过去自己对我的<strong>期待</strong>，我过上了她想要的生活。那也让我成为过去的自己吧，我相信她也一定会有底气地过上我现在想要的一切的。</p>
+<p>我打算这段时间多看一些<strong>思辨性</strong>强的书，我想找回我的<strong>灵性</strong>。</p>
+<p>写这段文字还是在<strong>三月八日</strong>，写完这段文字就已经是<strong>Miku日</strong>了。祝所有的女性友友们<strong>节日快乐</strong>，也祝你我在物质和精神上永远<strong>自由</strong>、<strong>敏锐</strong>、<strong>坚强</strong>。</p></p>
             
             <div class="post-content readmore">
                 
                 
-                <div class="text-content"><p>我真的很想要去专注的多做一些事 …</p></div>
-                <div class="full-content" style="display: none;"><p>我真的很想要去专注的多做一些事情，但是几乎每件事情都是做了个差不多就没再去碰，我也不知道到底要研究到什么地步才叫做“掌握了这项技能”，就只好每天多做一些事情吧。我确实应该做一些更科学的时间管理和任务规划，但是研究这个管理也丢进了我的TO DO LIST。</p>
-<p>入职了滨寿司，其实一小时22元的时薪很好了，刷盘子的工作还是比较累的。但是我这段时间确实有些缺钱，再加上工作环境很愉快，就当锻炼锻炼身体了，我还年轻嘛！</p>
-<p>我是天蝎座，初中的时候和同学聊天，总是会说天蝎座是很记仇的人。我不知一次思考过，我是不是记仇的人呢？我其实还蛮记仇的，如果让我伤心难过了，我会一直记在心里然后开始幻想在未来的哪一天狠狠的超越那些欺负我的人。但亦或是自己终究麻木了，亦或是自己能力确实没那么强，到了若干年之后，这股气最终转换成了“曾经的坏想法”罢了。</p>
-<p>但是人总是好难好难满足的。初中的时候我想逃离枣庄，逃离家里人——那时候的我幻想着，有什么女仆店，我逃到了哪里，一边打工，一边上学，最终过上了想要的生活；我还幻想着，幻想着能被有钱的吸血鬼姐姐带到无忧无虑可以自己生活的公寓，幻想着能造出来一个和我一模一样的机器人代替我上学、工作、结婚生子——这样我就能在妈妈不伤心的情况下自由地活着了。我曾经真的很喜欢幻想，或许这是我曾经的灵性所在。现在不怎么幻想了，因为我要守护另一个爱幻想的小猫的梦，可是也越来越觉得自己变得麻木、变得理所当然、变得没那么细腻了。</p>
-<p>我习惯了太多事情，</p>
-<p>我习惯了性少数在这边土地下是见不得人的、</p>
-<p>我习惯了不公平的社会资源分配环境、</p>
-<p>我习惯了男性网民在互联网上的第一性发言、</p>
-<p>我习惯了对一切政治意识形态的解构娱乐、</p>
-<p>我习惯了无源头的恶意和偏见、</p>
-<p>我习惯了战争和互联网战争。</p>
-<p>可我也慢慢不知道我是谁，我应该如何，我们应该如何了。其实人也并非不能麻木地或者，但总觉得，不对，不应该，我不应该就这么忍受下去。</p>
-<p>我很害怕我成为无聊的大人，所以我一直在守护着自己所有的惊奇。我小心翼翼地保护着自己每一份新鲜体验，</p>
-<p>我还会因为去麦当劳用点餐机点餐而感到幸福、</p>
-<p>我还会因为坐地铁随着列车的加速度而感到幸福、</p>
-<p>我还会因为学校发新书撕开塑封阅读目录而感到幸福、</p>
-<p>我还会因为在机厅出勤切实地帮助到了新玩家而感受到幸福、</p>
-<p>最重要的是，我已经离开束缚的环境，我实现了过去自己想要的生活，我可以做很多事情，我真的很幸福。</p>
-<p>我其实没什么勇气去拥抱过去的自己的，因为我现在的生活也还是一团乱麻。但我的确没辜负过去自己对我的期待，我过上了她想要的生活。那也让我成为过去的自己吧，我相信她也一定会有底气地过上我现在想要的一切的。</p>
-<p>我打算这段时间多看一些思辨性强的书，我想找回我的灵性。</p>
-<p>写这段文字还是在三月八日，写完这段文字就已经是Miku日了。祝所有的女性友友们节日快乐，也祝你我在物质和精神上永远自由、敏锐、坚强。</p></div>
+                <div class="text-content"></div>
+                <div class="full-content" style="display: none;"></div>
                 <summary class="read-more-btn" onclick="toggleReadMore('post-3')" style="display: inline;">阅读更多</summary>
                 
             </div>

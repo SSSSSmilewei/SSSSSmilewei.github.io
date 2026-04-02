@@ -1,49 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>zundamoDance | &gt;·圍笑就是山貓貓·&lt;</title>
+    <title>俊达夜之舞/ずんだナイトダンス feat.俊达萌/ずんだもん | &gt;·圍笑就是山貓貓·&lt;</title>
     <link rel="canonical" href="https://SSSSSmilewei.github.io/">
     
     
     <link rel="icon" href="/favicon.ico">
     
     
-    <meta name="description" content="音乐链接
-音乐信息
-日本語の歌詞
-Aメロ
-Q1 ねぇ、今どんな気持ち？
-A1 羨ましいのだ
-Q2 ねぇ。流石にそろそろ
-A2 まぁ、どうでもええのだ
-Bメロ
-紫外線を避け 地平線を抜け
-二面性を持つ
-ヤバめのシグナル
-具体性を持つ 二卵性の鬱
-死体 蹴っ飛ばす 昼休み
-Cメロ
-階段の下を指さす 汚いデビルに 影が差す
-登下校の トーンレトロも
-急行列車が 連れてくの
-サビ1
-寂れた電波 線路の上
-憂いた 独りぼっち 心持ち ずんだ餅
-手首の傷が 愛を叫ぶ
-足掻いた 精神病棟も 教育機関も 呪うのだ
-貼られた 哀と虐の二文字
-被って痛いもん 辛いもん ずんだもん
-バケツの水も 慣れはしない
-腫らした目の下の涙の痕 世も末な
-ブリッジ
-掠れた吐息 天気は雨
-枯らした期待だって 痛いなんて 言えないよ
-忘れてないよ あんたの声
-笑って 辛くなって 暗くなって 呪うのだ
-サビ2
-流れた 星は 泣いてるのだ
-猫星か 犬星か 妖精の星か わからんだもん">
+    <meta name="description" content="我很喜欢的歌——ずんだオーバーダンス的续作，高速钢琴和强烈的界隈风非常抓耳，很喜欢很喜欢。">
     
+    
+    <meta name="keywords" content="音乐分享">
     
     
     <style>
@@ -70,6 +38,11 @@ Cメロ
     --outline-color2: #CEEAFF;
     --list-style-type: "";
     --list-style-image: url("/flower.png");
+    --body-font: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root.font-harmony {
+    --body-font: 'HarmonyOS_Sans_SC', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @font-face {
@@ -79,9 +52,16 @@ Cメロ
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'HarmonyOS_Sans_SC';
+    src: url('/Fonts/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'zpix', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--body-font);
 }
 
 @-moz-document url-prefix() {
@@ -209,6 +189,7 @@ li.page-item a{
     text-decoration: none;
     user-select: none;
 }
+
 
 li.page-item.active a{
     color: var(--accent-color);
@@ -607,7 +588,70 @@ pre {
 .userbox-id { min-width:64px; padding:8px 10px; font-weight:bold; text-align:center; border-right:2px solid var(--outline-color); }
 .userbox-body { display:flex; align-items:center; gap:8px; padding:8px 10px; }
 .userbox-icon { width:24px; height:24px; object-fit:contain; }
+
+#font-switch-btn, #tc-switch-btn {
+    cursor: pointer;
+}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.js"></script>
+<script>
+
+async function applyTrad() {
+    const isTrad = localStorage.getItem('is-trad') === 'true';
+    const tcText = document.getElementById('tc-text');
+    if (isTrad) {
+        const converter = OpenCC.Converter({ from: 'cn', to: 'tw' });
+        
+        const walk = (node) => {
+            if (node.nodeType === 3) {
+                node.data = converter(node.data);
+            } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+                for (let child of node.childNodes) walk(child);
+            }
+        };
+        walk(document.body);
+        if (tcText) tcText.innerText = '已轉換為正體中文';
+    }
+}
+
+function toggleTrad() {
+    const isTrad = localStorage.getItem('is-trad') === 'true';
+    if (isTrad) {
+        localStorage.setItem('is-trad', 'false');
+    } else {
+        localStorage.setItem('is-trad', 'true');
+    }
+    location.reload(); 
+}
+
+
+function applyFont() {
+    const isHarmony = localStorage.getItem('font-harmony') === 'true';
+    if (isHarmony) {
+        document.documentElement.classList.add('font-harmony');
+    } else {
+        document.documentElement.classList.remove('font-harmony');
+    }
+}
+
+function toggleFont() {
+    const isHarmony = document.documentElement.classList.contains('font-harmony');
+    if (isHarmony) {
+        document.documentElement.classList.remove('font-harmony');
+        localStorage.setItem('font-harmony', 'false');
+    } else {
+        document.documentElement.classList.add('font-harmony');
+        localStorage.setItem('font-harmony', 'true');
+    }
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    applyFont();
+    applyTrad();
+});
+</script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
@@ -615,20 +659,42 @@ pre {
 </head>
 <body>
         <header><h1 id="&gt;·圍笑就是山貓貓·&lt;"><a href="https://SSSSSmilewei.github.io/">&gt;·圍笑就是山貓貓·&lt;</a></h1></header>
+    <nav class="languages links">
+        <ul>
+        
+         
+         <li><a href="javascript:void(0);" onclick="toggleTrad()" id="tc-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="m11 4-2 1v14l2-1 5 2V7l-5-2z"/><path d="M4 15v4h3"/><path d="M4 19v-4h3"/></svg><span id="tc-text">繁體中文</span></a></li>
+         
+         <li><a href="javascript:void(0);" onclick="toggleFont()" id="font-switch-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>字体转换</a></li>
+        </ul>
+    </nav>
 <main>
     
 <div id="single-post">
 
     <article>
-        <h2>zundamoDance</h2>
+        <h2>俊达夜之舞/ずんだナイトダンス feat.俊达萌/ずんだもん</h2>
         
         tags:
         
+        <a href="/tags/%e9%9f%b3%e4%b9%90%e5%88%86%e4%ba%ab">音乐分享</a>
+        
         <div class="post-header">
-        @ <span class="timestamp">2026/04/01</span>
+        @Smilewei <span class="timestamp">2026/04/01</span>
         </div>
-        <p><h2 id="音乐链接">音乐链接</h2>
-<h2 id="音乐信息">音乐信息</h2>
+        <p>我很喜欢的歌——ずんだオーバーダンス的续作，高速钢琴和强烈的界隈风非常抓耳，很喜欢很喜欢。</p>
+        
+        <div class="auto-numbering" id="full-content"><p><img src="https://pbs.twimg.com/media/HE3noWUbMAEL35n?format=png&amp;name=900x900" alt=""></p>
+<h3 id="1-音乐链接">1. 音乐链接</h3>
+<p><a href="https://www.bilibili.com/video/BV12xfGBFEo3/?vd_source=26799ea78496fa2b95d855405f1d5602">哔哩哔哩</a></p>
+<h3 id="2-音乐信息">2. 音乐信息</h3>
+<p><strong>音乐名</strong>：ずんだナイトダンス (Zunda Night Dance)</p>
+<p><strong>艺术家/乐队</strong>：<strong>魔法使いシラガ</strong>。联合词作：<strong>サカヅキバラ</strong>；声音调校：<strong>猫星御菓子司</strong>（星空観測P）；曲绘插图：<strong>イルカモク</strong>。</p>
+<p><strong>发行年份</strong>：2026年</p>
+<p><strong>音乐曲风</strong>：高速电子舞曲 / <strong>界隈曲</strong>（BPM: 190）</p>
+<p>本曲是新锐合成声音游制作人 <strong>魔法使いシラガ</strong> 为参与日本最具影响力的 Vocaloid 文化盛典之一 <strong><a href="https://zh.moegirl.org.cn/The_VOCALOID_Collection">The VOCALOID Collection</a></strong>（简称 <strong>ボカコレ2026冬</strong>）的 <strong>Rookie（新人）榜单</strong> 而倾力打造的参赛作品。歌曲由高人气语音合成角色 <strong><a href="https://zh.moegirl.org.cn/%E6%9F%9D%E8%B1%86%E6%B3%A5">ずんだもん</a></strong>（Zundamon，本曲基于 <strong><a href="https://zh.moegirl.org.cn/CeVIO">CeVIO</a></strong> 引擎）担任主唱。</p>
+<p>作为作者前作《ずんだオーバーダンス》（Zunda Over Dance）的正统精神续作，本作在听感与立意上展现了极为极致的“反差美学”。在编曲方面，高达 190 的 BPM 营造出了一种令人肾上腺素飙升的神经质狂欢感；然而在文本层面，歌词却充斥着极度致郁、黑暗的意象。词作中直白的“被泼冷水（バケツの水）”、“手腕的伤痕（手首の傷）”、“精神病院（精神病棟）”、“欺凌（哀と虐）”等字眼，无情地撕开了校园暴力与精神崩溃的阴暗面。</p>
+<p><strong><a href="https://zh.moegirl.org.cn/%E6%9F%9D%E8%B1%86%E6%B3%A5">ずんだもん</a></strong> 标志性的可爱幼态声线与这种病态绝望的歌词构成了强烈的视听割裂感。经过 <strong>猫星御菓子司</strong> 细腻且略带诡异的情感调校，角色的歌声透出一种看透世俗的麻木与疯狂的戏谑。这种将欢快洗脑的电音节拍与猎奇、致郁的亚文化文本深度绑定的创作手法，是 Vocaloid 圈内“<strong><a href="https://zh.moegirl.org.cn/%E7%95%8C%E9%9A%8E%E6%9B%B2">界隈曲</a></strong>”的经典特征，赋予了这首歌难以戒断的极高“毒性”与深刻的艺术表现力。</p>
 <h2 id="日本語の歌詞">日本語の歌詞</h2>
 <p>Aメロ</p>
 <p>Q1 ねぇ、今どんな気持ち？</p>
@@ -661,9 +727,8 @@ pre {
 <p>笑って 辛くなって 暗くなって 呪うのだ</p>
 <p>サビ2</p>
 <p>流れた 星は 泣いてるのだ</p>
-<p>猫星か 犬星か 妖精の星か わからんだもん</p></p>
-        
-        <div class="auto-numbering" id="full-content"><p>フられた 雪も 蹌踉ている</p>
+<p>猫星か 犬星か 妖精の星か わからんだもん</p>
+<p>フられた 雪も 蹌踉ている</p>
 <p>今日の星空観測は ごめんなのだ</p>
 <p>轢かれた ずんだ 可愛い可愛いのだダダダダダダ</p>
 <p>いないはず いるのはず ずんだ餅</p>
@@ -718,7 +783,8 @@ pre {
 <p>撒的到處都是 內與臟兩個大字</p>
 <p>好紅呀 那是晚霞喔 永遠的 毛豆麻糬</p>
 <p>明天肯定是 美好的一天</p>
-<p>所以明天 我會作為妖精 再次轉生的</p></div>
+<p>所以明天 我會作為妖精 再次轉生的</p>
+</div>
         
     </article>
     <script>
